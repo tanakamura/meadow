@@ -135,6 +135,7 @@ WINMM     = winmm.lib
 WINSPOOL	= winspool.lib
 OLE32		= ole32.lib
 UUID		= uuid.lib
+LLVM_DIR        = ../LLVM
 
 !ifdef NOOPT
 DEBUG_CFLAGS	= -DEMACSDEBUG -DGLYPH_DEBUG -Fd$(BLD)\vc.pdb \
@@ -143,7 +144,7 @@ DEBUG_CFLAGS	= -DEMACSDEBUG -DGLYPH_DEBUG -Fd$(BLD)\vc.pdb \
 DEBUG_CFLAGS	= -Fd$(BLD)\vc.pdb
 !endif
 CFLAGS          = -I. -DWIN32_LEAN_AND_MEAN $(ARCH_CFLAGS) -D$(ARCH) \
-		  -D_CRTAPI1=_cdecl $(DEBUG_CFLAGS) $(USER_CFLAGS) $(LOCAL_FLAGS)
+		  -D_CRTAPI1=_cdecl $(DEBUG_CFLAGS) $(USER_CFLAGS) $(LOCAL_FLAGS) -I$(LLVM_DIR)/include
 MEADOW_CFLAGS	=  -DMEADOW="\"$(MEADOW_VERSION)\"" \
 		  -DMEADOW_VERSION_STRING=$(MEADOW_VERSION_STRING) \
 		  -DW32_VER4 -DWINVER=$(WINVER)
@@ -249,8 +250,12 @@ EXTRA_LINK      = -profile
 !IF ("$(_NMAKE_VER)" == "$(_NMAKE_VER_4)")
 .c{$(BLD)}.obj:
 		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
+.cpp{$(BLD)}.obj:
+		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
 !ELSE
 .c{$(BLD)}.obj::
+		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
+.cpp{$(BLD)}.obj:
 		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
 !ENDIF
 

@@ -1,6 +1,8 @@
 *.elc
 *~
 *~
+*.db
+LLVM
 etc/DOC-X
 etc/calccard.info
 info/ada-mode

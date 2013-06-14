@@ -1626,6 +1626,8 @@ main (argc, argv
 #endif
 #endif
 
+      syms_of_clang ();
+
 #ifdef MEADOW
       syms_of_mw32term ();
       syms_of_mw32fns ();

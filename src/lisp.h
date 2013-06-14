@@ -1806,7 +1806,11 @@ struct handler
        t: handle all conditions.
        error: handle all conditions, and errors can run the debugger
               or display a backtrace.  */
+#ifdef __cplusplus
+    Lisp_Object handler_;
+#else
     Lisp_Object handler;
+#endif
     Lisp_Object var;
     /* Fsignal stores here the condition-case clause that applies,
        and Fcondition_case thus knows which clause to run.  */
@@ -3229,6 +3233,8 @@ extern void syms_of_dired P_ ((void));
 /* Defined in term.c */
 extern void syms_of_term P_ ((void));
 extern void fatal () NO_RETURN;
+
+extern void syms_of_clang P_ ((void));
 
 #ifdef HAVE_WINDOW_SYSTEM
 /* Defined in fontset.c */

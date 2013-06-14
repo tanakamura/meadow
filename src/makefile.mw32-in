@@ -135,7 +135,9 @@ WIN32OBJ = $(BLD)/mw32term.$(O)		\
 	   $(BLD)/mw32mci.$(O)		\
 	   $(BLD)/xfaces.$(O)		\
 	   $(BLD)/mw32bdf.$(O)		\
-	   $(BLD)/mw32ime.$(O)
+	   $(BLD)/mw32ime.$(O) 		\
+	   $(BLD)/clang.$(O) \
+
 
 LIBS =  $(TLIB0)	\
 	$(TLIB1)	\
@@ -159,6 +161,8 @@ LIBS =  $(TLIB0)	\
 .SUFFIXES: .po
 
 $(BLD)/%.po: %.c
+	$(CC) -E $(CFLAGS) $< > $(BLD)/$*.po
+$(BLD)/%.po: %.cpp
 	$(CC) -E $(CFLAGS) $< > $(BLD)/$*.po
 
 ALLOBJS = $(OBJ0) $(OBJ1) $(WIN32OBJ)
@@ -1674,5 +1678,8 @@ $(BLD)/mw32ime.$(O): \
     $(SRC)/coding.h \
     $(SRC)/ccl.h \
     $(SRC)/mw32term.h
+
+$(BLD)/mw32ime.$(O): \
+    $(SRC)/config.h \
 
 ### automatically generated dependency end
