@@ -3494,7 +3494,11 @@ Use `file-symlink-p' to test for such links.  */)
 
   absname = ENCODE_FILE (absname);
 
+#ifdef MEADOW
+  return (GetFileAttributes (SDATA (absname)) != INVALID_FILE_ATTRIBUTES) ? Qt : Qnil;
+#else
   return (stat (SDATA (absname), &statbuf) >= 0) ? Qt : Qnil;
+#endif
 }
 
 DEFUN ("file-executable-p", Ffile_executable_p, Sfile_executable_p, 1, 1, 0,

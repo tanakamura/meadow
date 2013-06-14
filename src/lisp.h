@@ -2872,6 +2872,7 @@ extern void syms_of_marker P_ ((void));
 /* Defined in fileio.c */
 
 extern Lisp_Object Qfile_error;
+extern Lisp_Object Qfile_exists_p;
 EXFUN (Ffind_file_name_handler, 2);
 EXFUN (Ffile_name_as_directory, 1);
 EXFUN (Fmake_temp_name, 1);

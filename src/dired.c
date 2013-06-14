@@ -25,6 +25,7 @@ Boston, MA 02110-1301, USA.  */
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <windows.h>
 
 #ifdef HAVE_PWD_H
 #include <pwd.h>
@@ -136,6 +137,17 @@ directory_files_internal_unwind (dh)
   DIR *d = (DIR *) XSAVE_VALUE (dh)->pointer;
   BLOCK_INPUT;
   closedir (d);
+  UNBLOCK_INPUT;
+  return Qnil;
+}
+
+Lisp_Object
+w32_directory_files_internal_unwind (dh)
+     Lisp_Object dh;
+{
+  HANDLE *d = (HANDLE *) XSAVE_VALUE (dh)->pointer;
+  BLOCK_INPUT;
+  FindClose(d);
   UNBLOCK_INPUT;
   return Qnil;
 }
@@ -461,7 +473,9 @@ file_name_completion (file, dirname, all_flag, ver_flag, predicate)
      int all_flag, ver_flag;
      Lisp_Object predicate;
 {
+#ifndef MEADOW
   DIR *d;
+#endif
   int bestmatchsize = 0, skip;
   register int compare, matchsize;
   unsigned char *p1, *p2;
@@ -523,6 +537,38 @@ file_name_completion (file, dirname, all_flag, ver_flag, predicate)
     {
       int inner_count = SPECPDL_INDEX ();
 
+#ifdef MEADOW
+      WIN32_FIND_DATA fd;
+      HANDLE find_handle;
+      int first = 1;
+      int path_len;
+      int ok = 0;
+      char path[MAX_PATH];
+      Lisp_Object dir_file_name;
+
+      BLOCK_INPUT;
+      dir_file_name = Fdirectory_file_name (encoded_dir);
+      path_len = SCHARS (dir_file_name);
+      if (path_len <= (MAX_PATH - 3))
+	{
+	  bcopy (SDATA (dir_file_name), path, path_len);
+	  path[path_len] = '\\';
+	  path[path_len+1] = '*';
+	  path[path_len+2] = '\0';
+
+	  find_handle = FindFirstFile (path, &fd);
+	  if (find_handle != INVALID_HANDLE_VALUE)
+	    ok = 1;
+	}
+
+      UNBLOCK_INPUT;
+
+      if (!ok)
+	report_file_error ("Opening directory", Fcons (dirname, Qnil));
+
+      record_unwind_protect (w32_directory_files_internal_unwind,
+                             make_save_value (find_handle, 0));
+#else
       BLOCK_INPUT;
       d = opendir (SDATA (Fdirectory_file_name (encoded_dir)));
       UNBLOCK_INPUT;
@@ -531,13 +577,46 @@ file_name_completion (file, dirname, all_flag, ver_flag, predicate)
 
       record_unwind_protect (directory_files_internal_unwind,
                              make_save_value (d, 0));
+#endif
+
 
       /* Loop reading blocks */
       /* (att3b compiler bug requires do a null comparison this way) */
       while (1)
 	{
-	  DIRENTRY *dp;
 	  int len;
+
+#ifdef MEADOW
+	  struct w32_dir {
+	    char *d_name;
+	  } dir, *dp;
+
+	  if (!first)
+	    {
+	      BOOL r = FindNextFile(find_handle, &fd);
+	      if (!r)
+		break;
+	    }
+	  first = 0;
+
+	  dir.d_name = fd.cFileName;
+	  dp = &dir;
+
+	  len = strlen(dir.d_name);
+	  QUIT;
+
+	  if (len < SCHARS (encoded_file)
+	      || 0 <= scmp (dp->d_name, SDATA (encoded_file),
+			    SCHARS (encoded_file)))
+	    continue;
+
+	  if (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+	    directoryp = 1;
+	  else
+	    directoryp = 0;
+
+#else
+	  DIRENTRY *dp;
 
 #ifdef VMS
 	  dp = (*readfunc) (d);
@@ -565,11 +644,12 @@ file_name_completion (file, dirname, all_flag, ver_flag, predicate)
 	      || 0 <= scmp (dp->d_name, SDATA (encoded_file),
 			    SCHARS (encoded_file)))
 	    continue;
-
           if (file_name_completion_stat (encoded_dir, dp, &st) < 0)
             continue;
 
           directoryp = ((st.st_mode & S_IFMT) == S_IFDIR);
+#endif
+
 	  tem = Qnil;
           if (directoryp)
 	    {
@@ -669,7 +749,7 @@ file_name_completion (file, dirname, all_flag, ver_flag, predicate)
 
 	  /* Test the predicate, if any.  */
 
-	  if (!NILP (predicate))
+	  if (!NILP (predicate) && (predicate != Qfile_exists_p))
 	    {
 	      Lisp_Object decoded;
 	      Lisp_Object val;
@@ -794,6 +874,42 @@ scmp (s1, s2, len)
     return -1;
   else
     return len - l;
+}
+
+
+static int
+w32_file_name_completion_stat (dirname, dp, directoryp)
+     Lisp_Object dirname;
+     DIRENTRY *dp;
+     int *directoryp;
+{
+  int len = NAMLEN (dp);
+  int pos = SCHARS (dirname);
+  int value;
+  char *fullname = (char *) alloca (len + pos + 2);
+  DWORD attr;
+
+  bcopy (SDATA (dirname), fullname, pos);
+  bcopy (dp->d_name, fullname + pos, len);
+
+  fullname[pos + len] = 0;
+
+  attr = GetFileAttributes(fullname);
+  if (attr == INVALID_FILE_ATTRIBUTES)
+    {
+      return -1;
+    }
+
+  if (attr & FILE_ATTRIBUTE_DIRECTORY)
+    {
+      *directoryp = 1;
+    }
+  else
+    {
+      *directoryp = 0;
+    }
+
+  return 0;
 }
 
 static int

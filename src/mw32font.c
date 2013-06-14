@@ -115,9 +115,12 @@ typedef struct mw32_windows_font
 {
   LOGFONT logfont;
   HFONT pfont;
+  HDC compat_dc;
+  HGDIOBJ compat_dc_old_font;
   int ttfp;
   XCharStruct cur_cm;
   XCharStruct cmcache[256];
+  short abc_cache[65536][3];
 } mw32_windows_font;
 
 static void
@@ -148,14 +151,23 @@ mw32_windows_set_logical_font_from_char (MW32LogicalFont *plf, int c)
 }
 
 static void
+mw32_windows_font_alloc_hfont (mw32_windows_font *pwf)
+{
+    if (pwf->pfont == INVALID_HANDLE_VALUE)
+      {
+	pwf->pfont = CreateFontIndirect (&pwf->logfont);
+	pwf->compat_dc_old_font = SelectObject (pwf->compat_dc, pwf->pfont);
+      }
+}
+
+static void
 mw32_textout (MW32LogicalFont *plf, HDC hdc, unsigned char *text,
 	      int x, int ybase, int bytes, int* xoffs, RECT *pr,
 	      int mode)
 {
   HANDLE hold;
   mw32_windows_font *pwf = (mw32_windows_font*) plf->pphys;
-  if (pwf->pfont == INVALID_HANDLE_VALUE)
-    pwf->pfont = CreateFontIndirect (&pwf->logfont);
+  mw32_windows_font_alloc_hfont (pwf);
   hold = SelectObject (hdc, pwf->pfont);
   ExtTextOut (hdc, x, ybase, mode, pr, text, bytes, xoffs);
   SelectObject (hdc, hold);
@@ -189,29 +201,36 @@ mw32_glyph_metric (MW32LogicalFont *plf, XChar2b *cp, int font_type)
 
   {
     HANDLE hold;
-    HDC hdc = GetDC (NULL);
+    HDC hdc = pwf->compat_dc;
 
-    if (pwf->pfont == INVALID_HANDLE_VALUE)
-      pwf->pfont = CreateFontIndirect (&pwf->logfont);
-    hold = SelectObject (hdc, pwf->pfont);
+    mw32_windows_font_alloc_hfont (pwf);
 
     if (pwf->ttfp)
       {
+	XChar2b c = *cp;
 	ABC abc;
-	int ret = GetCharABCWidths (hdc, *cp, *cp, &abc);
-
-	if (ret)
+	if ((c < 65536) && (pwf->abc_cache[c][0] != -1))
 	  {
-	    pwf->cur_cm.width = abc.abcA + abc.abcB + abc.abcC;
-	    pwf->cur_cm.rbearing = abc.abcA + abc.abcB;
-	    pwf->cur_cm.lbearing = abc.abcA;
+	    abc.abcA = pwf->abc_cache[c][0];
+	    abc.abcB = pwf->abc_cache[c][1];
+	    abc.abcC = pwf->abc_cache[c][2];
 	  }
 	else
 	  {
-	    SelectObject (hdc, hold);
-	    ReleaseDC (NULL, hdc);
-	    return 0;
+	    int ret = GetCharABCWidths (hdc, *cp, *cp, &abc);
+	    if (! ret)
+	      return 0;
+	    if (c < 65536)
+	      {
+		pwf->abc_cache[c][0] = abc.abcA;
+		pwf->abc_cache[c][1] = abc.abcB;
+		pwf->abc_cache[c][2] = abc.abcC;
+	      }
 	  }
+
+	pwf->cur_cm.width = abc.abcA + abc.abcB + abc.abcC;
+	pwf->cur_cm.rbearing = abc.abcA + abc.abcB;
+	pwf->cur_cm.lbearing = abc.abcA;
       }
     else
       {
@@ -239,9 +258,6 @@ mw32_glyph_metric (MW32LogicalFont *plf, XChar2b *cp, int font_type)
     pwf->cur_cm.ascent = plf->ascent;
     pwf->cur_cm.descent = plf->descent;
     pwf->cur_cm.width += get_device_width (hdc, plf->character_spacing);
-
-    SelectObject (hdc, hold);
-    ReleaseDC (NULL, hdc);
   }
   if (plf->encoding.font_unit_byte == 1)
     pwf->cmcache[*cp] = pwf->cur_cm;
@@ -259,8 +275,8 @@ mw32_set_layout (MW32LogicalFont *plf, HDC hdc, unsigned char *pstr,
   HANDLE hold;
   GCP_RESULTS gcp;
   mw32_windows_font *pwf = (mw32_windows_font*) plf->pphys;
-  if (pwf->pfont == INVALID_HANDLE_VALUE)
-    pwf->pfont = CreateFontIndirect (&pwf->logfont);
+
+  mw32_windows_font_alloc_hfont (pwf);
 
   if ((maxextent == 0) && (nbytes == 1))
     {
@@ -313,7 +329,11 @@ static void mw32_logfont_free (MW32LogicalFont *plf)
   mw32_windows_font *pwf = (mw32_windows_font*) plf->pphys;
 
   if (pwf->pfont != INVALID_HANDLE_VALUE)
-    DeleteObject (pwf->pfont);
+    {
+      SelectObject (pwf->compat_dc, pwf->compat_dc_old_font);
+      DeleteObject (pwf->pfont);
+    }
+  DeleteDC (pwf->compat_dc);
   xfree (pwf);
 }
 
@@ -361,16 +381,18 @@ mw32_set_windows_logical_font (struct frame *f, MW32LogicalFont *plf,
       HDC hdc;
       HANDLE oldobj;
       TEXTMETRIC tm;
-      int flag;
+      int flag, i;
 
       hdc = GET_FRAME_HDC (f);
       oldobj = SelectObject (hdc, hf);
       flag = GetTextMetrics (hdc, &tm);
       SelectObject (hdc, oldobj);
+      pwf->compat_dc = CreateCompatibleDC (hdc);
       RELEASE_FRAME_HDC (f);
 
       if (!flag)
 	{
+	  DeleteDC (pwf->compat_dc);
 	  xfree (pwf);
 	  return 0;
 	}
@@ -383,6 +405,10 @@ mw32_set_windows_logical_font (struct frame *f, MW32LogicalFont *plf,
 	  tm.tmAveCharWidth = target_width;
 	  DeleteObject (hf);
 	  hf = INVALID_HANDLE_VALUE;
+	}
+      else
+	{
+	  pwf->compat_dc_old_font = SelectObject (pwf->compat_dc, hf);
 	}
 
       pwf->pfont = hf;
@@ -409,6 +435,7 @@ mw32_set_windows_logical_font (struct frame *f, MW32LogicalFont *plf,
 
 	  if (!(hf_normal = CreateFontIndirect (&logf_normal)))
 	    {
+	      DeleteDC (pwf->compat_dc);
 	      xfree (pwf);
 	      return 0;
 	    }
@@ -423,6 +450,7 @@ mw32_set_windows_logical_font (struct frame *f, MW32LogicalFont *plf,
 
 	  if (!flag)
 	    {
+	      DeleteDC (pwf->compat_dc);
 	      xfree (pwf);
 	      return 0;
 	    }
@@ -438,6 +466,10 @@ mw32_set_windows_logical_font (struct frame *f, MW32LogicalFont *plf,
       plf->default_ascent = 0;
       plf->character_spacing = 0;
       plf->centering = 0;
+
+      for (i=0; i<65536; i++) {
+	pwf->abc_cache[i][0] = -1;
+      }
     }
   else
     {
