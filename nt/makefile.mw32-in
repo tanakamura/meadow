@@ -1,0 +1,310 @@
+#  -*- Makefile -*- for GNU Emacs on the Microsoft W32 API.
+#  Copyright (C) 2000, 2001, 2002, 2003, 2004,
+#    2005, 2006 Free Software Foundation, Inc.
+#
+#  Top level makefile for building GNU Emacs on Windows NT
+#
+#  This file is part of GNU Emacs.
+#
+#  GNU Emacs is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2, or (at your option)
+#  any later version.
+#
+#  GNU Emacs is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with GNU Emacs; see the file COPYING.  If not, write to
+#  the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+#  Boston, MA 02110-1301, USA.
+
+ALL		= RunMW32 install_exe cmdproxy fiber addsection preprep
+
+.PHONY: $(ALL)
+
+TRES		= $(BLD)/meadow.res
+
+XMFLAGS		=
+
+install_exe:	stamp_BLD $(BLD)/install.exe
+$(BLD)/install.exe: $(BLD)/install.$(O)
+		$(LINK) $(LINK_OUT)$@ \
+		$(LINK_FLAGS) $(ALL_DEPS) $(BASE_LIBS) $(ADVAPI32) $(USER32) $(OLE32) $(SHELL32) $(UUID)
+
+fiber:		stamp_BLD $(BLD)/fiber.exe
+$(BLD)/fiber.exe: $(BLD)/fiber.$(O)
+		$(LINK) $(LINK_OUT)$@ \
+		$(LINK_FLAGS) $(ALL_DEPS) $(BASE_LIBS) $(ADVAPI32) $(SHELL32) $(USER32)
+
+RunMW32:	stamp_BLD $(BLD)/RunMW32.exe
+$(BLD)/RunMW32.exe: $(BLD)/RunMW32.$(O) $(TRES)
+		$(LINK) -mwindows $(LINK_OUT)$@ \
+		$(LINK_FLAGS) $(ALL_DEPS) $(BASE_LIBS) $(USER32)
+
+cmdproxy:	  stamp_BLD $(BLD)/cmdproxy.exe
+$(BLD)/cmdproxy.exe: $(BLD)/cmdproxy.$(O)
+		  $(LINK) $(LINK_OUT)$@ \
+		  $(LINK_FLAGS) $(ALL_DEPS) $(BASE_LIBS) $(USER32)
+
+addsection:	  stamp_BLD $(BLD)/addsection.exe
+$(BLD)/addsection.exe: $(BLD)/addsection.$(O)
+		  $(LINK) $(LINK_OUT)$@ \
+		  $(LINK_FLAGS) $(ALL_DEPS) $(BASE_LIBS) $(USER32)
+
+preprep:	  stamp_BLD $(BLD)/preprep.exe
+$(BLD)/preprep.exe: $(BLD)/preprep.$(O)
+		  $(LINK) $(LINK_OUT)$@ \
+		  $(LINK_FLAGS) $(ALL_DEPS) $(BASE_LIBS)
+
+#
+# The resource file.  NT 3.10 requires the use of cvtres; even though
+# it is not necessary on later versions, it is still ok to use it.
+#
+$(TRES):	meadow.rc stamp_BLD
+		$(RC) $(RC_OUT)$(BLD)/meadow.res meadow.rc
+
+which-sh:
+	@echo Using $(THE_SHELL) as shell.
+
+# These depend on stamp_BLD to make sure the $(BLD) directory is created
+# before the compilation begins, even if Make runs several commands
+# in parallel under "make -j".
+#
+$(BLD)/addpm.$(O) $(BLD)/ddeclient.$(O) $(BLD)/runemacs.$(O) $(BLD)/cmdproxy.$(O) $(BLD)/addsection.$(O) $(BLD)/preprep.$(O): stamp_BLD
+
+#
+# Build emacs
+#
+all:	which-sh stamp_BLD $(ALL) maybe-bootstrap all-other-dirs-$(MAKETYPE)
+
+all-other-dirs-nmake: addsection
+	cd ..\lib-src
+	$(MAKE) $(MFLAGS) all
+	cd ..\src
+	$(MAKE) $(MFLAGS) all
+	cd ..\lisp
+	$(MAKE) $(MFLAGS) all
+	cd ..\leim
+	$(MAKE) $(MFLAGS) all
+	cd ..\nt
+
+all-other-dirs-gmake: addsection
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lib-src all
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src all
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lisp all
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../leim all
+
+recompile:	recompile-$(MAKETYPE)
+
+recompile-nmake:
+	cd ..\lisp
+	$(MAKE) $(MFLAGS) recompile
+	cd ..\nt
+
+recompile-gmake:
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lisp recompile
+
+#### Bootstrapping.
+
+### This is meant for Emacs maintainers only.  It first cleans the
+### lisp subdirectory, removing all compiled Lisp files.  Then a
+### special emacs executable is built from Lisp sources, which is then
+### used to compile Lisp files.  The last step is a "normal" make.
+
+maybe-bootstrap: maybe-bootstrap-$(SHELLTYPE)
+
+# dummy target to force other targets to be evaluated.
+doit:
+
+maybe-bootstrap-CMD:	doit
+	@echo .
+	@if not EXIST ..\lisp\abbrev.elc echo Essential Lisp files seem to be missing.  You should either
+	@if not EXIST ..\lisp\abbrev.elc echo do 'make bootstrap' or create 'lisp/abbrev.elc' somehow
+	@echo .
+	@if not EXIST ..\lisp\abbrev.elc exit -1
+
+maybe-bootstrap-SH: doit
+	@if [ ! -f ../lisp/abbrev.elc ] ; then \
+	  echo; \
+	  echo "Essential Lisp files seem to be missing.  You should either"; \
+	  echo "do \`make bootstrap' or create \`lisp/abbrev.elc' somehow.";  \
+	  echo; \
+	  exit -1; \
+	fi
+
+bootstrap:	addsection bootstrap-$(MAKETYPE)
+	$(MAKE) $(MFLAGS) $(XMFLAGS) all
+
+bootstrap-nmake: addsection
+	cd ..\lisp
+	$(MAKE) $(MFLAGS) bootstrap-clean
+	cd ..\nt
+	$(MAKE) $(MFLAGS) info
+	cd ..\src
+	$(MAKE) $(MFLAGS) clean
+	cd ..\lib-src
+	$(MAKE) $(MFLAGS) clean
+	cd ..\src
+	$(MAKE) $(MFLAGS) bootstrap
+	$(MAKE) $(MFLAGS) bootstrap-clean
+	cd ..\lisp
+	$(MAKE) $(MFLAGS) SHELL=$(SHELLTYPE) bootstrap
+	cd ..\lib-src
+	$(MAKE) $(MFLAGS) DOC
+	cd ..\nt
+
+bootstrap-gmake: addsection
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lisp bootstrap-clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) info
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lib-src clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src bootstrap
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src bootstrap-clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lisp bootstrap
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lib-src DOC
+
+bootstrap-clean: bootstrap-clean-$(MAKETYPE)
+
+bootstrap-clean-nmake:
+	cd ..\src
+	$(MAKE) $(MFLAGS) bootstrap-clean
+	cd ..\lisp
+	$(MAKE) $(MFLAGS) bootstrap-clean
+
+bootstrap-clean-gmake:
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src bootstrap-clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lisp bootstrap-clean
+
+$(INSTALL_DIR):
+	- mkdir "$(INSTALL_DIR)"
+
+$(INSTALL_DIR)/bin: $(INSTALL_DIR)
+	- mkdir "$(INSTALL_DIR)/bin"
+
+#
+# Build and install emacs in INSTALL_DIR
+#
+install: all $(INSTALL_DIR)/bin info install-other-dirs-$(MAKETYPE)
+	- $(CP) $(BLD)/cmdproxy.exe $(INSTALL_DIR)/bin
+	- $(DEL) ../same-dir.tst
+	- $(DEL) $(INSTALL_DIR)/same-dir.tst
+	echo SameDirTest > "$(INSTALL_DIR)/same-dir.tst"
+	- mkdir "$(INSTALL_DIR)/etc"
+	- mkdir "$(INSTALL_DIR)/info"
+	- mkdir "$(INSTALL_DIR)/site-lisp"
+	- mkdir "$(INSTALL_DIR)/etc/icons"
+	$(IFNOTSAMEDIR) $(CP) ../site-lisp/subdirs.el $(INSTALL_DIR)/site-lisp $(ENDIF)
+	$(IFNOTSAMEDIR) $(CP_DIR) "..\etc" "$(INSTALL_DIR_M_DOS)\etc" $(ENDIF)
+	- $(CP_DIR) icons "$(INSTALL_DIR_M_DOS)\etc\icons"
+	$(IFNOTSAMEDIR) $(CP_DIR) "..\info" "$(INSTALL_DIR_M_DOS)\info" $(ENDIF)
+	- $(CP) README.Meadow $(INSTALL_DIR)
+	- $(CP) INSTALL.Meadow $(INSTALL_DIR)
+	- $(CP) README.Meadow.ja $(INSTALL_DIR)
+	- $(CP) INSTALL.Meadow.ja $(INSTALL_DIR)
+	- $(CP) dot.emacs.ja $(INSTALL_DIR)
+	- $(CP) fiber.txt $(INSTALL_DIR)/bin
+	- $(CP) dump.bat $(INSTALL_DIR)/bin
+	- $(CP) $(BLD)/cmdproxy.exe $(INSTALL_DIR)/bin
+	- $(CP) $(BLD)/RunMW32.exe $(INSTALL_DIR)/bin
+	- $(CP) meadow.ico $(INSTALL_DIR)/bin
+	- $(CP) $(BLD)/install.exe $(INSTALL_DIR)
+	- $(CP) $(BLD)/fiber.exe $(INSTALL_DIR)/bin
+	- mkdir "$(INSTALL_DIR)/site-lisp"
+	- $(CP) ../site-lisp/subdirs.el $(INSTALL_DIR)/site-lisp
+	- mkdir "$(INSTALL_DIR_M)/bitmap"
+	$(IFNOTSAMEDIR) $(CP_DIR) bitmap "$(INSTALL_DIR_M_DOS)\bitmap" $(ENDIF)
+	- $(DEL) ../same-dir.tst
+	- $(DEL) $(INSTALL_DIR)/same-dir.tst
+
+install-other-dirs-nmake:
+	cd ..\lib-src
+	$(MAKE) $(MFLAGS) install
+	cd ..\src
+	$(MAKE) $(MFLAGS) install
+	cd ..\lisp
+	$(MAKE) $(MFLAGS) install
+	cd ..\leim
+	$(MAKE) $(MFLAGS) install
+	cd ..\nt
+
+install-other-dirs-gmake:
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lib-src install
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src install
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lisp install
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../leim install
+
+force-info:
+# Note that man/makefile knows how to
+# put the info files in $(infodir),
+# so we can do ok running make in the build dir.
+info: force-info info-$(MAKETYPE)
+
+info-nmake:
+	cd ..\man
+	$(MAKE) $(MFLAGS) info
+	cd ..\lispref
+	$(MAKE) $(MFLAGS) info
+	cd ..\lispintro
+	$(MAKE) $(MFLAGS) info
+
+info-gmake:
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../man info
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lispref info
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lispintro info
+#
+# Maintenance
+#
+clean:	clean-other-dirs-$(MAKETYPE)
+	- $(DEL) *~ $(COMPILER_TEMP_FILES)
+	- $(DEL_TREE) $(OBJDIR)
+	- $(DEL) stamp_BLD
+	- $(DEL) ../etc/DOC ../etc/DOC-X
+
+clean-other-dirs-nmake:
+	cd ..\lib-src
+	$(MAKE) $(MFLAGS) clean
+	cd ..\src
+	$(MAKE) $(MFLAGS) clean
+	cd ..\lisp
+	$(MAKE) $(MFLAGS) clean
+	cd ..\lispintro
+	$(MAKE) $(MFLAGS) clean
+	cd ..\lispref
+	$(MAKE) $(MFLAGS) clean
+	cd ..\leim
+	$(MAKE) $(MFLAGS) clean
+	cd ..\man
+	$(MAKE) $(MFLAGS) clean
+	cd ..\nt
+
+clean-other-dirs-gmake:
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lib-src clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lisp clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lispintro clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lispref clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../leim clean
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../man clean
+
+cleanall-other-dirs-nmake:
+	cd ..\lib-src
+	$(MAKE) $(MFLAGS) cleanall
+	cd ..\src
+	$(MAKE) $(MFLAGS) cleanall
+	cd ..\nt
+
+cleanall-other-dirs-gmake:
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../lib-src cleanall
+	$(MAKE) $(MFLAGS) $(XMFLAGS) -C ../src cleanall
+
+cleanall: clean cleanall-other-dirs-$(MAKETYPE)
+	 - $(DEL_TREE) obj
+	 - $(DEL_TREE) obj-spd
+	 - $(DEL_TREE) oo
+	 - $(DEL_TREE) oo-spd
+
+realclean: cleanall
+	- $(DEL_TREE) ../bin

@@ -1,0 +1,119 @@
+Tasks needed before the next release.
+
+* WINDOWS SUPPORT BUGS.
+
+These don't need to be fixed before a release, but we call the
+attention of Windows users to fixing them.
+
+** henman@it.to-be.co.jp 09 Aug 2006: ispell.el problem on Cygwin.
+  (Did we decide that is unreproducible?)
+
+* BUGS WAITING FOR MORE USER INPUT
+
+** undefined reference getopt_long
+Report by Daniel C. Bastos <dbast0s@yahoo.com.br> on bug-gnu-emacs
+from 2007-08-27.  Impossible to procede without more input from OP (as
+of 20070912, emails are bouncing) or someone else who can reproduce this.
+http://lists.gnu.org/archive/html/emacs-devel/2007-08/msg01497.html
+
+** emacs-22.1 with GTK problems (with patches)
+Only outstanding issue seems to be whether Solaris 2.6 GTK can be
+supported in the absence of recursive mutexes, via a change to
+alloc.c, or whether configure should abort.
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-09/msg00055.html
+
+* BUGS
+
+* Bugs and feature requests for 22.3 or later
+
+** python.el changes by Dave Love?
+
+** etags support for php5
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-09/msg00131.html
+
+** Etags completion problem for local tags table
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2008-02/msg00103.html
+
+** M-x grep significantly slower in emacs 22 (compared to emacs 21)
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-09/msg00155.html
+
+** Emacs CVS: find-file.el - Line up all columns in output
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-10/msg00039.html
+Do we need papers for Jari Aalto? [no, we have them already]
+
+** emacs crashs when remote x-windows closes after make-frame-on-display
+even when other frame was closed due to assertion in xcd_xlib.c
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-10/msg00082.html
+
+** outline does not change heading line endings
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-10/msg00175.html
+If this feature might be easy to implement and safe, we can add it to
+Emacs 22 at some point.
+
+** mouse-2 and calc-yank
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-12/msg00048.html
+
+** query-replace / longlines / C-o
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-12/msg00073.html
+
+** don't require path hints for *shell*
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2008-01/msg00046.html
+
+** Two display bugs involving interactions between after-string and
+display properties of adjacent overlays
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-10/msg00119.html
+First bug is fixed in trunk: 2008-02-29 checkin to xdisp.c by cyd.
+
+** overlay face property not used for after-string property
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-10/msg00124.html
+
+** Should dired-do-search bind tags-loop-revert-buffers automatically?
+http://lists.gnu.org/archive/html/emacs-devel/2008-02/msg00059.html
+
+** Backport find-function-search-for-symbol change to try `.emacs'
+Fix is already in the trunk, and can wait till after 22.2.
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2008-01/msg00147.html
+
+** Auto-Save bug when file/directory no longer exists
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-11/msg00058.html
+Fix is already in the trunk, and can wait till after 22.2.
+2008-02-23 change to fileio.c by cyd.
+
+** Bug in url-get-authentication
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-12/msg00058.html
+Fix is already in the trunk.
+2008-01-29 change to url-auth.el by John Wiegley.
+
+** Shell-script indenting of &&, |
+Patch here:
+http://lists.gnu.org/archive/html/emacs-devel/2008-02/msg02814.html
+http://lists.gnu.org/archive/html/emacs-devel/2008-02/msg02939.html
+
+** Bug in etags ".." code
+Patch available at
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2008-03/msg00014.html
+
+** slow editing in .h files
+Patch available at
+http://lists.gnu.org/archive/html/emacs-devel/2008-03/msg00658.html
+
+* WINDOWS SUPPORT BUGS (for 22.3 or later).
+
+** Description in the "Open with..." dialog should tell about the purpose
+of the binary (or at least display name of the executable).
+http://thread.gmane.org/v9myprs3u4.fsf@marauder.physik.uni-ulm.de
+
+** `locate' and drive letter ("C:") on Windows
+For a recipe to reproduce the problem on GNU/Linux, see 
+<http://thread.gmane.org/gmane.emacs.devel/88971/focus=89106>
+
+* DOCUMENTATION
+
+** Shouldn't directory-abbrev-alist be in Emacs manual?
+http://lists.gnu.org/archive/html/bug-gnu-emacs/2007-10/msg00017.html
+
+
+Local variables:
+mode: outline
+coding: utf-8
+end:

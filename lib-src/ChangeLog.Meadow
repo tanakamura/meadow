@@ -1,0 +1,390 @@
+2009-06-08  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* Sync up with Emacs22.3.
+
+2008-04-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.mw32-in (obj): Add w32select.o instead of mw32clpbd.o.
+	Thanks to Kazuhiro Ito <kzhr@d1.dion.ne.jp>.
+
+2008-04-04  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22.2.
+
+2007-07-07  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22.1.
+
+2007-06-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22 BASE.
+
+2007-05-01  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-04-07  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-03-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-02-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-01-21  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.mw32-in: Sync up with makefile.w32-in.
+
+2006-11-19  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.mw32-in: Sync up with makefile.w32-in.
+	  This change makes emacsclinent and emacsclientw available.
+
+2006-11-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-10-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-09-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-08-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-29  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-09  YAZAMAZAKI Katsuhiro <yamazaki-k@mwe.biglobe.ne.jp>
+
+	* makefile.mw32-in (MOUSE_SUPPORT): Add tooltip.elc.
+
+2006-07-01  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-06-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.mw32-in (DOC): Don't depend on temacs.exe.
+
+2006-06-11  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.mw32-in: Sync up with Emacs CVS HEAD.  Refer to
+	ticket:306.
+
+2006-05-27  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-03  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-04-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-02-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-01-28  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-11-26  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-11-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-10-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-09-17  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.nt: Removed.
+
+	* makefile.meadow.w32-in: Ditto.
+
+2005-09-04  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.w32-in ($(DOC)): Undo the last change.
+
+	* makefile.mw32-in ($(DOC)): Don't depend on
+	`../src/$(BLD)/temacs.exe'.
+
+2005-09-03  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.w32-in ($(DOC)): Don't depend on
+	`../src/$(BLD)/temacs.exe'.
+
+2005-09-02  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.mw32-in: New file.
+
+2005-08-27  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.meadow.w32-in: Don't depend on mw32faces.elc.
+
+	* makefile.nt: Ditto.
+
+2005-08-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-08-06  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-06-25  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-05-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-04-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-04-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* movemail.c: Don't undefine `access' and `unlink'.
+
+2005-02-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.meadow.w32-in (DOC): Depend on $(lisp1) and $(lisp2)
+	and not yet on $(obj).
+
+	* makefile.nt (DOC): Ditto.
+
+2005-02-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.meadow.w32-in (DOC): Sync up with Emacs CVS HEAD.
+
+2005-02-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* make-docfile.c: Sync up with Emacs CVS HEAD.
+
+	* makefile.nt: Ditto.
+
+	* makefile.meadow.w32-in: Ditto.
+
+2004-11-28  Shuichi KITAGUCHI  <kit@ysnb.net>
+
+	* makefile.nt (SRC): remove INCLUDE from RC.
+
+2004-10-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.meadow.w32-in: Sync up with Emacs CVS HEAD.
+
+	* makefile.nt: Ditto.
+
+2004-09-04  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.meadow.w32-in (obj): Remove mocklisp.c
+
+	* makefile.nt (obj): Ditto.
+
+2004-08-23  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* make-docfile.c: Don't undefine main, fopen and chdir.
+
+2004-08-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* make-docfile.c: Sync up with Emacs CVS HEAD.
+
+2004-07-07  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* Meadow 2.00 (KIKYOU) Release.
+
+2003-12-29  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* Sync up with Emacs-21.3.
+
+2003-12-28  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* Sync up with Emacs-21.2.
+
+2003-12-23  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.nt (ETAGS_CFLAGS): Don't define ETAGS_REGEXPS.
+
+2003-11-28  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in (lisp): Don't depend on invalid compiled
+	files.
+
+	* makefile.nt (lisp): Ditto.
+
+2003-11-27  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* makefile.nt ($(DOC)): Fix dependency.
+	(obj): Fix entry files.
+
+	* makefile.meadow.w32-in ($(DOC)): Fix dependency.
+	(obj): Fix entry files.
+
+2003-10-18  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* ntlib.h (fileno): Undefine for Mingw-3.2 or any later version.
+
+2003-03-01  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.nt (WINNT_SUPPORT): Add mw32mci.elc.
+
+	* makefile.meadow.w32-in (WINNT_SUPPORT): Ditto.
+
+2003-01-22  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in: Suppress compilation warnings.
+
+2002-10-20  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in (obj): Follow the change of makefile.nt.
+	Thanks to Masayuki FUJII (boochang@m4.kcn.ne.jp).
+
+2002-10-12  Koichiro Ohba  <koichiro@meadowy.org>
+
+	* makefile.nt (obj): Add mw32fns.c.
+
+2002-09-29  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in: Change install directory in Meadow's
+	way.
+
+2002-09-28  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	* progdlg.c (resume_window_pos): Change to ANSI style argument
+	declaration to eliminate warning.
+	(save_window_pos): Likewise.
+	(DlgProc): Likewise.
+	(progress_open): Likewise.
+
+	* pop.c (pop_open): Removed unused variable.
+	(TOP:[PROGRESS_DIALOG]): Add function prototype for progress
+	dialog.
+
+	* movemail.c: Fix for compiling with VC7.
+	(main): Removed unused variable.
+
+	* make-docfile.c: Fix for compiling with VC7.
+
+2002-09-28  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* movemail.c: Apply Cygwin/Mingw support patch from Masayuki FUJII
+	(boochang@m4.kcn.ne.jp).
+
+	* makefile.meadow.w32-in: New file. Apply Cygwin/Mingw support
+	patch from Masayuki FUJII (boochang@m4.kcn.ne.jp).
+
+2002-01-20  Shuichi KITAGUCHI  <kit@meadowy.org>
+
+	* makefile.nt: Sync up with 21.1.
+
+2002-01-15  MIYASHITA Hisashi  <himi@m17n.org>
+
+       * emacs.csh: Removed. (Sync up with 21.0.104.)
+
+       * qsort.c: Removed. (Sync up with 21.0.104.)
+
+	* pop.c: Sync up with 21.0.104.
+
+	* makefile.nt: Sync up with 21.0.104.
+
+2000-04-15  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	* makefile.nt ($(BLD)\progdlg.res):
+	Allow spaces within include path.
+
+1999-10-16  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* makefile.nt ($(BLD)\pop.obj):
+	define PROGRESS_DIALOG.
+
+1999-09-16  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* progdlg.c:
+	Modify source styles.
+	(resume_window_pos):
+	(save_window_pos): 
+	New functions.
+	(DlgProc:[WM_INITDIALOG]):
+	call resume_window_pos() to resume dialog position.
+	(DlgProc:[WM_DESTROY]):
+	call save_window_pos() to save dialog position.
+	Merge these changes from K.Ohba.
+
+1999-09-03  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* progdlg.rc:
+	Write messages in English. (thanks K.Ohba.)
+
+1999-08-31  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* pop.c (pop_getline):
+	Call do_events() to deal with messsages from Windows
+	in the case of PROGRESS_DIALOG. (thanks K.Ohba.)
+
+1999-08-11  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* movemail.c:
+	* pop.c:
+	* pop.h:
+	sync up with movemail-990810 from Shun-ichi GOTO.
+
+1999-08-09  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* makefile.nt ($(BLD)\md5.obj):
+	New dependency.
+	(MOVEMAILOBJS):
+	Add md5.obj.
+	(MOVEMAIL_PROGDLG):
+	New macro.
+	(MOVEMAIL_PROGDLG_LIB): 
+	New macro.
+	($(BLD)\movemail.exe):
+	Rewrite source list and command line.
+
+	* pop.c: 
+	APOP support.
+
+	* md5.c:
+	* md5.h:
+	MD5 modules for pop.c.
+	
+	* movemail.c:
+	Sync up with new version.
+	New features are as follows.
+	- APOP support.
+	- dialog location persistency.
+	Thanks to Koichiro Ohba and Shun-ichi GOTO.
+
+1999-07-17  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* makefile.nt (.c{$(BLD)}.obj):
+	Enable `::' target option only on NMAKE above version 4 and on i386
+	architecture.
+

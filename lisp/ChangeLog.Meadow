@@ -1,0 +1,4009 @@
+2009-06-08  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* Sync up with Emacs22.3.
+
+2009-05-24  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.mw32-in (lisp_dos): New variable.
+
+2009-05-23  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* files.el (file-truename): Enable symbolic link support for
+	Meadow.
+
+2008-06-04  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	* x-selection-exists-p: Remove alias beause of switching to use
+	w32select.c instead of obsoleted mw32clpbd.c. (ticket #390)
+
+2008-04-04  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22.2.
+
+2007-07-07  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22.1.
+
+2007-06-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22 BASE.
+
+2007-05-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22 BASE.
+
+2007-05-01  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-04-07  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-03-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-03-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32misc.el (mouse-set-font): Sync up with Emacs
+	CVS HEAD. Refer to ticket:370.
+
+2007-02-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (fancy-splash-tail): Update the year of
+	copyright.
+
+2007-02-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-01-21  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.mw32-in: Sync up with makefile.w32-in.
+
+2007-01-08  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-11-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-10-29  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-10-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-10-01  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* mail/smtpmail.el (smtpmail-try-auth-methods): Fix a typo in
+	Emacs CVS HEAD in advance.
+
+2006-09-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-09-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-09-09  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-08-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-08-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-29  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-19  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32misc.el (mw32-convert-fr-spec-to-vec): Accept
+	'undecided for any properties of <SPEC-PLIST>.
+
+2006-07-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32misc.el (mw32-convert-font-request-alist):
+	Accept 'any for <SPEC-PLIST>.
+
+2006-07-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* mw32scroll.el (w32-handle-mouse-wheel-mode-line): Don't use the
+	amount of the mouse movement in the event.
+	Use `wheel-up' and `wheel-down' instead of `mouse-wheel1'.
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* mw32scroll.el (w32-handle-mouse-wheel-event): Take the 5th
+	element for the difference of the mouse position.  Refer to
+	ticket:312.
+	(w32-handle-mouse-wheel-mode-line): Ditto.
+
+2006-07-01  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-27  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-sync-state): Don't sync IME
+	state when this-command is nil.  Refer to ticket:302.
+
+2006-05-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el: Remove redundant spaces.
+
+	* international/mw32misc.el: Ditto.
+
+2006-05-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-13  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-03  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-04-23  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (fancy-splash-tail): Update the year of
+	copyright.
+
+2006-04-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-03-13  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (mw32-ime-cont-on): Change default value
+	to 'always.
+	(mw32-ime-sync-state): Don't sync IME state when
+	mw32-ime-composition-window is not nil. Modify to handle (eq
+	mw32-ime-cont-on 'always).
+	(mw32-ime-initialize): Ditto.
+	(mw32-ime-uninitialize): Ditto.
+	(mw32-isearch-mode-hook-function): Ditto.
+	(mw32-isearch-update): New function.
+	(mw32-input-method): Keystroke protection is moved into
+	mw32-ime-input-method-function.
+
+2006-02-28  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	Cleanup files by sync'ing with emacs cvs repository.
+
+	* calc/calc-maint.el: Removed because it is no longer exist in
+	cvs repository since 2004-11-26.
+
+	* eshell/esh-groups.el: Removed because which is auto-generated
+	file which is no longer exist in cvs repository since 2002-04-01.
+
+	* net/password.el: Removed because it is no longer exist in
+	cvs repository since 2004-10-29.
+
+	* eshell: Set svn:ignore property sync with .cvsignore.
+
+2006-02-28  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	Removed obsoleted file and sync'ed contents of svn:ignore with
+	.cvsignore.
+
+	* cus-load.el: Removed because it is already removed from cvs
+	repository at 2002-10-10.
+
+2006-02-28  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	Removed some files which should be removed in last sync-up with
+	emacs-cvs.
+
+	* mh-e/mh-index.el: Removed because it is already merged into
+	mh-search.el.
+
+	* mh-e/mh-pick.el: Likewise.
+
+	* mh-e/mh-exec.el: Removed because it is already merged into
+	mh-e.el.
+
+	* mh-e/mh-loaddef.el: Removed because is is not under version
+	control in emacs-cvs.
+
+2006-02-27  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	* help.el (describe-key-briefly): Fix incorrect behavour by
+	applying fix on emacs-cvs rev 1.300.
+
+2006-02-26  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* mh-e/mh-customize.el: Removed.
+
+	* mh-e/mh-init.el: Ditto.
+
+2006-02-24  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (mw32-input-method): Protect key strokes
+	around switching of fep from disordering and/or vanishing.
+
+2006-02-21  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* makefile.mw32-in: Fix `mh-e' and `erc'.
+
+2006-02-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-02-03  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* international/mw32script.el
+	(mw32script-file-executable-p): Add dos-string.
+	(mw32script-original-executable-find): New variable.
+	(mw32script-executable-find): New function.
+	(mw32script-init): Substitute `executable-find' to
+	`mw32script-executable-find' and tiny fix.
+
+2006-02-03  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* international/mw32script.el (mw32script-argument-editing-alist):
+	Support env command.
+
+2006-02-01  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/mule-cmds.el (set-language-environment-hook):
+	Remove meadow specific code and equivalent process is added to
+	set-language-environment.
+	(set-language-environment): Ditto.
+
+2006-01-30  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* term/w32-win.el: Fix last sync up.
+
+2006-01-28  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-12-28  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (mw32-input-method): Don't continue to
+	use FEP when length of the composition string is zero. Set
+	redisplay-dont-pause when calling sit-for. Preserve
+	buffer-modified-p.
+	(mw32-ime-show-mode-line): Make default value nil.
+	(mw32-ime-init-mode-line-display): Don't setup mode line when
+	mw32-ime-show-mode-line is nil.
+
+	* international/mw32misc.el (general-process-argument-editing-function):
+	Bug fix about wrapper function.
+
+2005-12-14  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* international/meadow.el (mw32-input-method): Avoid byte-compile
+	warnings; use (car (cddr x)) instead of (caddr x).
+	(mw32-ime-initialize): Don't set default-input-method if it is
+	available.
+	(top): Change to iso-2022-7bit-unix on this file.
+
+2005-12-13  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (mw32-ime-cont-on): New variable.
+	(mw32-input-method-noconv-regexp): New variable.
+	(mw32-set-ime-if-available): Initialize MW32-IME.
+	(mw32-ime-sync-state): Changed.
+	(mw32-ime-mode-line-update): Remove redundant parameter.
+	(mw32-ime-initialize): Ressurected. Change doc string. Add
+	treatment for isearch.
+	(mw32-ime-uninitialize): Add treatment for isearch.
+	(mw32-isearch-mode-hook-function): New hook function.
+	(mw32-ime-state-switch): Move IME initialization into
+	mw32-ime-initialize.
+	(): Change registration of MW32-IME.
+	(mw32-input-method): New function to be used for
+	input-method-function.
+
+2005-11-26  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-11-14  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mule-cmds.el (set-language-info): Call set-language-environment
+	if lang-env is quual to current-language-environment.
+
+2005-11-11  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (scroll-but-point): Avoid setting the point on the
+	line not fully displayed after scrolling. Fixed ticket:208.
+	(w32-handle-mouse-wheel-event): Ditto.
+
+2005-11-02  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* international/mw32misc.el (encode-unicode-font): Remove
+	`eval-after-load'; "fontset" add loadup.el.
+	Set 3rd argument to `2'.
+
+2005-11-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* mouse.el.orig: Removed.
+
+2005-11-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-11-01  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* international/mw32misc.el (report-emacs-bug-address): Bind to
+	`meadow-develop@meadowy.org'.
+	(report-emacs-bug-pretest-address): Ditto.
+
+2005-10-28  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (w32-scroll-bar-drag): Avoid arithmetic error when
+	start dragging at the end of the buffer.
+
+2005-10-28  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* dos-w32.el (top): Don't regist
+	find-buffer-file-type-coding-system to file-coding-system-alist on
+	Meadow.
+
+2005-10-28  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (wrap-function-to-control-ime):
+	Run hooks mw32-ime-on/off-hook when call fep-force-on/off.
+
+2005-10-23  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* international/meadow.el (x-parse-geometry): Removed. Built-in
+	function is used instead.
+
+2005-10-21  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* international/meadow.el (x-parse-geometry): Parse negative
+	offsets correctly.
+
+2005-10-15  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (w32-scroll-bar-drag): Avoid division by 0.
+	(truncate NaN) yields 0 on MSVC and exception on cygwin gcc.
+
+	* international/meadow.el (mw32-set-ime-if-available): Setup key
+	bind of [kanji].
+	(mw32-ime-initialize): Ditto.
+
+2005-10-14  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (mw32-locale-ime-alist): New alist.
+	(mw32-set-ime-if-available): New function.
+
+	* international/mule-cmds.el (set-language-environment-hook): Set
+	mw32-set-ime-if-available on Meadow.
+
+2005-10-13  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (mw32-ime-toggle): Obsoleted, but left
+	for compatibility.
+	(mw32-ime-initialize): Ditto.
+	(mw32-ime-state-switch): Initialize hooks for control ime if not
+	done.
+
+2005-10-06  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* options.el: Removed.
+
+2005-10-05  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* international/mw32misc.el (w32-font-encoder-p): New function.
+	(encode-unicode-font): Regist new font encoder.
+	(encode-indian-glyph-font): Ditto.
+
+2005-10-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-09-17  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* finder-inf.el: Removed. This file is automatically generated.
+
+	* subdirs.el: Ditto.
+
+	* makefile.mw32-in: Removed.
+
+	* makefil.nt: Ditto.
+
+2005-09-15  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* startup.el (command-line): Allow call set-locale-environment()
+	here. Cyncing up with Emacs CVS HEAD.
+
+2005-09-15  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/meadow.el (w32-shell-execute): Use
+	locale-coding-system instead of obsolete variable
+	w32-system-coding-system.
+
+	* international/mw32misc.el (set-w32-system-coding-system): Ditto.
+
+	* mw32reg.el (mw32-registry-get-string): Ditto.
+	(mw32-registry-get-string-list): Ditto.
+
+	* w32-fns.el (set-w32-system-coding-system): Ditto, syncing up
+	with Emcas CVS HEAD.
+	(w32-system-coding-system): Defined as varalias of
+	locale-coding-system, syncing up with Emacs CVS HEAD.
+
+2005-09-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-09-09  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (w32-scroll-bar-drag): Avoid showing invisible
+	portion of buffer in scrolling.
+	Fixed issue MW137.
+
+	(scroll-but-point): Ditto.
+
+2005-09-04  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.mw32-in (EMACS): Path of Meadow is changed from
+	`../bin/Meadow.exe' to `../src/$(BLD)/Meadow.exe'.
+
+2005-09-03  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.mw32-in (bootstrap): Don't remove $(EMACS), which is
+	used to recompile lisp files afterward.
+
+2005-09-03  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/mw32misc.el (mw32-process-wrapper-alist): Alter
+	comment after the change of format.
+	(set-process-connection-type-pty): New function.
+	(find-process-wrapper-function): Handle new data structure.
+	(general-process-argument-editing-function): Ditto.
+
+2005-09-02  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* makefile.mw32-in: New file.
+
+2005-09-01  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/mw32script.el (mw32script-resolve-script): Make
+	work buffer unibyte to ensure return strings are unibyte.
+
+2005-08-28  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Removed.
+
+	* cus-load.el: Update.
+
+	* makefile.nt (bootstrap-clean): Create loaddfes.el from
+	ldefs-boot.el.
+
+2005-08-27  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-08-27  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* mw32faces.el: Removed.
+
+	* mw32reg.el (mw32-registry-get-string-list): New optional
+	argument, `coding' to supress a compilation warning.
+	Normalize coding style.
+
+	* mw32scroll.el: Normalize coding style.
+
+2005-08-27  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (w32-scroll-bar-drag): Buf fix.
+
+2005-08-26  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (w32-scroll-bar-drag): Inhibit echoing keystrokes
+	when scrolling by thumbtrack.
+
+2005-08-25  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (w32-scroll-bar-drag): Refine the manner of
+	scrolling by thumbtrack.
+	(w32-scroll-event-handle-p): Make aware of handle-position.
+	(w32-scroll-event-handle-position-p): New function.
+	(w32-scroll-bar-drag-1): Removed.
+	(w32-handle-scroll-bar-event): Make aware of handle-posiion.
+
+2005-08-24  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* mw32scroll.el (w32-scroll-event-handle-p): Deal with the case
+	that (event-start event) is not list.
+	(w32-scroll-bar-drag): Bug fix. Rewind of point by save-excursion
+	is unwated.
+
+2005-08-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el (button-map): Fix typo (quote-button -> quote
+	push-button).
+
+2005-08-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el (button-map): Use "\C-m" instead of "^M".
+	(widget-keymap): Ditto.
+
+2005-08-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-08-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32script.el (mw32script-resolve-script): Remove
+	redundant spaces.
+
+	* international/mw32misc.el (w32-mouse-operation-init):
+	Simplified.
+	(after-init-hook): Ditto.
+	(w32-auto-regist-bdf-font): Removed.
+	(create-font-from-logfont-list): Ditto.
+	(set-font-from-logfont): Ditto.
+
+	* international/meadow.el: Simplify doc-strings.
+
+2005-08-19  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (isearch-ime-keymap): Removed.
+	(wrap-function-to-control-ime): Normalize coding style.
+
+2005-08-19  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (wrap-function-to-control-ime): Turn off
+	the IME when it is on and current-input-method is "MW32-IME".  And
+	restore its state when it is off and current-input-method is
+	"MW32-IME" after evaluation of the original function.
+	(mw32-ime-sync-state): New function.
+	(mw32-ime-set-selected-window-buffer-hook): Call
+	mw32-ime-sync-state().
+	(mw32-ime-select-window-hook): Ditto.
+
+2005-08-06  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-07-31  Masayuki Fujii  <boochang@m4.kcn.ne.jp>
+
+	* international/meadow.el (before-init-hook): Register 'bmp as
+	image type of bitmap.
+	(fancy-splash-head): Set 'bmp as an argument of create-image.
+
+	* international/mw32misc.el (find-process-wrapper-function):
+	Support process selection by function call.
+	(mw32-process-wrapper-alist): modify description.
+
+2005-07-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el
+	(mw32-ime-set-selected-window-buffer-hook): Fix the condition to
+	turn off MW32-IME.
+
+2005-07-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-toggle): Call
+	activate/inactivate-input-method() instead running hooks in
+	mw32-ime-on/off-hook.  Thanks to YAGI Tatsuya <ynyaaa@ybb.ne.jp>.
+	(mw32-ime-state-switch): Run hooks in mw32-ime-on/off-hook.  And
+	set the argument for fep-force-on/off() nil.  Thanks to YAGI
+	Tatsuya <ynyaaa@ybb.ne.jp>.
+
+2005-07-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-state-switch): Don't call
+	mw32-ime-mode-line-update().
+	(mw32-ime-toggle): Call mw32-ime-mode-line-update().
+
+2005-07-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-toroku-region): Use
+	read-multilingual-string() instead of read-from-minibuffer().
+	Thanks to YAGI Tatsuya <ynyaaa@ybb.ne.jp>.
+	(mw32-ime-set-selected-window-buffer-hook): Take account of
+	`current-input-method'.  Thanks to YAGI Tatsuya
+	<ynyaaa@ybb.ne.jp>.
+	(mw32-ime-select-window-hook): Ditto.
+	(mw32-ime-toggle): Take account of `current-input-method' and
+	don't call mw32-ime-mode-line-update().  Thanks to YAGI Tatsuya
+	<ynyaaa@ybb.ne.jp>.
+	(mw32-ime-exit-from-minibuffer): New function.  Thanks to YAGI
+	Tatsuya <ynyaaa@ybb.ne.jp>.
+	(mw32-ime-state-switch): Add mw32-ime-exit-from-minibuffer() to
+	`minibuffer-exit-hook' when the minibuffer is selected.  And call
+	mw32-ime-mode-line-update().  Thanks to YAGI Tatsuya
+	<ynyaaa@ybb.ne.jp>.
+
+2005-07-25  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32mci.el: Removed redundant spaces.
+
+	* international/mw32misc.el
+	(mw32-charset-windows-font-info-alist): Ditto.
+
+2005-07-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-state): Removed.
+	(wrap-function-to-control-ime): Don't depend on `mw32-ime-state'.
+	(mw32-ime-toroku-region): Ditto.
+	(mw32-ime-set-selected-window-buffer-hook): Ditto.
+	(mw32-ime-select-window-hook): Ditto.
+	(mw32-ime-mode-line-update): Ditto.
+	(mw32-ime-init-mode-line-display): Ditto.
+	(mw32-ime-toggle): Ditto.
+
+2005-07-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32misc.el: Remove redundant spaces and normalize
+	coding style.
+
+	* international/mw32mci.el (mw32-mci-remove-notify-callback):
+	Remove the notify callback correctly.
+
+2005-07-23  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-state): Set it
+	permanent-local.
+	(mw32-ime-mode-line-state-indicator): Ditto.
+
+2005-07-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-initialize): Use
+	`assoc-string' instead of `assoc-ignore-case'.
+
+2005-07-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32misc.el (x-bitmap-file-path): Removed.  This
+	is a built-in variable now.
+
+	* international/meadow.el: Remove redundant spaces.
+
+	* ChangeLog.Meadow: Ditto.
+
+2005-07-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mw32-ime-select-window-hook): Set
+	`current-input-method' nil when switching to minibuffer.
+
+2005-06-25  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/mw32misc.el (after-init-hook): Remove the code
+	using mw32-bitmap-file-path that is removed in C-code.
+
+2005-06-25  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* simple.el: Sync up with Emacs CVS HEAD.
+
+	* loaddefs.el: Update.
+
+2005-06-25  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-06-15  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/mw32misc.el (mw32-process-wrapper-alist): Make
+	change in document to consistent with the modification in
+	create_process() in src/process.c.
+
+2005-06-14  Kyotaro HORIGUCHI  <horiguti@meadowy.org>
+
+	* international/mw32misc.el (find-process-wrapper-function): New
+	function to select process wrapper mechanism.
+	(mw32-inhibit-process-wrapper): New variable.
+	(mw32-process-wrapper-alist): New variable.
+	(general-process-argument-editing-function): Support process
+	wrapper invokation.
+
+2005-05-22  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-start.el: Suppress warnings.
+
+2005-05-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mw32misc.el (set-clipboard-coding-system):
+	Removed.
+
+2005-05-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-04-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-04-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (mouse-highlight): Bind to 1 for the
+	compatibility.
+
+2005-03-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* emacs-lisp/easymenu.el: Sync up with Emacs CVS HEAD.
+
+	* subr.el: Ditto.
+
+2005-03-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* toolbar/back_arrow.pbm: New image file from Emacs CVS HEAD.
+
+	* toolbar/back_arrow.pbm: Ditto.
+
+	* toolbar/back_arrow.xpm: Ditto.
+
+	* toolbar/diropen.pbm: Ditto.
+
+	* toolbar/diropen.xpm: Ditto.
+
+	* toolbar/fwd_arrow.pbm: Ditto.
+
+	* toolbar/fwd_arrow.xpm: Ditto.
+
+	* toolbar/lc-back_arrow.xpm: Ditto.
+
+	* toolbar/lc-fwd_arrow.xpm: Ditto.
+
+2005-02-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* term/w32-win.el: Don't define mouse-set-font() in the Meadow
+	environment.
+
+2005-02-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.meadow.w32-in (DONTCOMPILE): Remove cus-start.el.
+	Thanks to Kenichi Niioka <niioka@kk.iij4u.or.jp>.
+
+	* makefile.nt (DONTCOMPILE): Ditto.
+
+2005-02-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.meadow.w32-in (bootstrap-clean-SH): Sync up with Emacs
+	CVS HEAD.
+
+2005-02-13  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el (widget-keymap): Use "\C-m" instead of "^M".
+
+2005-02-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* startup.el (command-line): Don't call set-locale-environment().
+
+2005-02-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* term/w32-win.el: Sync up with Emacs CVS HEAD.
+
+	* loaddefs.el: Update.
+
+2005-02-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* loadup.el: Sync up with Emacs CVS HEAD.
+
+	* menu-bar.el: Ditto.
+
+	* recentf.el: Ditto.
+
+	* startup.el: Ditto.
+
+	* subr.el: Ditto.
+
+	* w32-fns.el: Ditto.
+
+	* emacs-lisp/advice.el: Ditto.
+
+	* emacs-lisp/autoload.el: Ditto.
+
+	* emacs-lisp/byte-opt.el: Ditto.
+
+	* emacs-lisp/bytecomp.el: Ditto.
+
+	* emacs-lisp/checkdoc.el: Ditto.
+
+	* emacs-lisp/cl-compat.el: Ditto.
+
+	* emacs-lisp/cl-macs.el: Ditto.
+
+	* emacs-lisp/cust-print.el: Ditto.
+
+	* emacs-lisp/debug.el: Ditto.
+
+	* emacs-lisp/derived.el: Ditto.
+
+	* emacs-lisp/easy-mmode.el: Ditto.
+
+	* emacs-lisp/edebug.el: Ditto.
+
+	* emacs-lisp/elint.el: Ditto.
+
+	* emacs-lisp/elp.el: Ditto.
+
+	* emacs-lisp/find-func.el: Ditto.
+
+	* emacs-lisp/lisp-mnt.el: Ditto.
+
+	* emacs-lisp/lisp-mode.el: Ditto.
+
+	* emacs-lisp/lisp.el: Ditto.
+
+	* emacs-lisp/lselect.el: Ditto.
+
+	* emacs-lisp/lucid.el: Ditto.
+
+	* emacs-lisp/re-builder.el: Ditto.
+
+	* emacs-lisp/regexp-opt.el: Ditto.
+
+	* emacs-lisp/timer.el: Ditto.
+
+	* emacs-lisp/warnings.el: Ditto.
+
+2005-02-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Makefile.in: Sync up with Emacs CVS HEAD.
+
+	* obsolete/hilit19.el: Ditto.
+
+	* printing.el: Ditto.
+
+	* ps-print.el: Ditto.
+
+	* recentf.el: Ditto.
+
+	* rect.el: Ditto.
+
+	* replace.el: Ditto.
+
+	* reveal.el: Ditto.
+
+	* ruler-mode.el: Ditto.
+
+2005-02-11  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-01-22  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el (button-map): Use "\C-m" instead of "^M".
+
+2005-01-19  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (fancy-splash-tail): Update the year of
+	copyright.
+
+2005-01-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (x-display-visual-class): Call
+	x-display-planes() instead of x-display-pixel-planes().  Check if
+	`n' is `full' or not with `eq'.
+
+2005-01-15  ARISAWA Akihiro  <ari@mbf.sphere.ne.jp>
+
+	* international/mw32misc.el (ccl-encode-cp1252-font): Define a new
+	font encoder and register it.
+	(w32-charset-encoding-alist): Set `ccl-encode-cp1252-font' as a
+	font encoder.
+
+2004-12-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+	* tar-mode.el (tar-mode): Sync up with Emacs CVS HEAD.  Thanks to
+	Hidefumi Fujimoto <fujimoto@pluto.dti.ne.jp>.
+
+	* subr.el (progress-reporter-update): New function from Emacs CVS
+	HEAD.  Thanks to Hidefumi Fujimoto <fujimoto@pluto.dti.ne.jp>.
+	(make-progress-reporter): Ditto.
+	(progress-reporter-force-update): Ditto.
+	(progress-reporter-do-update): Ditto.
+	(progress-reporter-done): Ditto.
+
+2004-11-28  Shuichi KITAGUCHI  <kit@ysnb.net>
+
+	* makefile.nt (subdirs.el): use makefile instead of makefile.nt
+	(bootstrap-clean): Ditto.
+
+2004-11-16  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* international/mw32misc.el (w32-mouse-operation-init):
+	Modify the condition for number of buttons on mouse.
+
+2004-11-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+2004-11-09  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* ibuf-ext.el: New file from Emacs CVS HEAD.
+
+	* ibuf-macs.el: Ditto.
+
+	* ibuffer.el: Ditto.
+
+2004-11-08  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+2004-11-06  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+	* info.el: Sync up with Emacs CVS HEAD.
+
+2004-10-31  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* lisp/cus-load.el: Update.
+
+	* lisp/loaddefs.el: Ditto.
+
+	* lisp/calc/calc-embed.el: Sync up with Emacs CVS HEAD.
+
+	* lisp/calc/calc-graph.el: Ditto.
+
+	* lisp/calc/calc-help.el: Ditto.
+
+	* lisp/calc/calc-misc.el: Ditto.
+
+	* lisp/calc/calc-units.el: Ditto.
+
+	* lisp/calc/calc.el: Ditto.
+
+	* lisp/calendar/cal-iso.el: Ditto.
+
+	* lisp/calendar/cal-menu.el: Ditto.
+
+	* lisp/calendar/calendar.el: Ditto.
+
+	* lisp/calendar/diary-lib.el: Ditto.
+
+	* lisp/calendar/holidays.el: Ditto.
+
+	* lisp/calendar/time-date.el: Ditto.
+
+	* lisp/emacs-lisp/cl-macs.el: Ditto.
+
+	* lisp/emacs-lisp/helper.el: Ditto.
+
+	* lisp/emulation/cua-base.el: Ditto.
+
+	* lisp/emulation/cua-rect.el: Ditto.
+
+	* lisp/eshell/em-pred.el: Ditto.
+
+	* lisp/eshell/esh-ext.el: Ditto.
+
+	* lisp/gnus/ChangeLog: Ditto.
+
+	* lisp/gnus/binhex.el: Ditto.
+
+	* lisp/gnus/catchup.xpm: Ditto.
+
+	* lisp/gnus/cu-exit.xpm: Ditto.
+
+	* lisp/gnus/describe-group.xpm: Ditto.
+
+	* lisp/gnus/earcon.el: Ditto.
+
+	* lisp/gnus/exit-gnus.xpm: Ditto.
+
+	* lisp/gnus/exit-summ.xpm: Ditto.
+
+	* lisp/gnus/flow-fill.el: Ditto.
+
+	* lisp/gnus/followup.xpm: Ditto.
+
+	* lisp/gnus/fuwo.xpm: Ditto.
+
+	* lisp/gnus/get-news.xpm: Ditto.
+
+	* lisp/gnus/gnntg.xpm: Ditto.
+
+	* lisp/gnus/gnus-agent.el: Ditto.
+
+	* lisp/gnus/gnus-art.el: Ditto.
+
+	* lisp/gnus/gnus-async.el: Ditto.
+
+	* lisp/gnus/gnus-audio.el: Ditto.
+
+	* lisp/gnus/gnus-bcklg.el: Ditto.
+
+	* lisp/gnus/gnus-cache.el: Ditto.
+
+	* lisp/gnus/gnus-cite.el: Ditto.
+
+	* lisp/gnus/gnus-cus.el: Ditto.
+
+	* lisp/gnus/gnus-demon.el: Ditto.
+
+	* lisp/gnus/gnus-draft.el: Ditto.
+
+	* lisp/gnus/gnus-dup.el: Ditto.
+
+	* lisp/gnus/gnus-eform.el: Ditto.
+
+	* lisp/gnus/gnus-ems.el: Ditto.
+
+	* lisp/gnus/gnus-gl.el: Ditto.
+
+	* lisp/gnus/gnus-group.el: Ditto.
+
+	* lisp/gnus/gnus-int.el: Ditto.
+
+	* lisp/gnus/gnus-kill.el: Ditto.
+
+	* lisp/gnus/gnus-logic.el: Ditto.
+
+	* lisp/gnus/gnus-mh.el: Ditto.
+
+	* lisp/gnus/gnus-ml.el: Ditto.
+
+	* lisp/gnus/gnus-mlspl.el: Ditto.
+
+	* lisp/gnus/gnus-msg.el: Ditto.
+
+	* lisp/gnus/gnus-nocem.el: Ditto.
+
+	* lisp/gnus/gnus-range.el: Ditto.
+
+	* lisp/gnus/gnus-salt.el: Ditto.
+
+	* lisp/gnus/gnus-score.el: Ditto.
+
+	* lisp/gnus/gnus-setup.el: Ditto.
+
+	* lisp/gnus/gnus-soup.el: Ditto.
+
+	* lisp/gnus/gnus-spec.el: Ditto.
+
+	* lisp/gnus/gnus-srvr.el: Ditto.
+
+	* lisp/gnus/gnus-start.el: Ditto.
+
+	* lisp/gnus/gnus-sum.el: Ditto.
+
+	* lisp/gnus/gnus-topic.el: Ditto.
+
+	* lisp/gnus/gnus-undo.el: Ditto.
+
+	* lisp/gnus/gnus-util.el: Ditto.
+
+	* lisp/gnus/gnus-uu.el: Ditto.
+
+	* lisp/gnus/gnus-vm.el: Ditto.
+
+	* lisp/gnus/gnus-win.el: Ditto.
+
+	* lisp/gnus/gnus.el: Ditto.
+
+	* lisp/gnus/ietf-drums.el: Ditto.
+
+	* lisp/gnus/imap.el: Ditto.
+
+	* lisp/gnus/kill-group.xpm: Ditto.
+
+	* lisp/gnus/mail-parse.el: Ditto.
+
+	* lisp/gnus/mail-prsvr.el: Ditto.
+
+	* lisp/gnus/mail-reply.xpm: Ditto.
+
+	* lisp/gnus/mail-source.el: Ditto.
+
+	* lisp/gnus/mailcap.el: Ditto.
+
+	* lisp/gnus/message.el: Ditto.
+
+	* lisp/gnus/messcompat.el: Ditto.
+
+	* lisp/gnus/mm-bodies.el: Ditto.
+
+	* lisp/gnus/mm-decode.el: Ditto.
+
+	* lisp/gnus/mm-encode.el: Ditto.
+
+	* lisp/gnus/mm-partial.el: Ditto.
+
+	* lisp/gnus/mm-util.el: Ditto.
+
+	* lisp/gnus/mm-uu.el: Ditto.
+
+	* lisp/gnus/mm-view.el: Ditto.
+
+	* lisp/gnus/mml.el: Ditto.
+
+	* lisp/gnus/next-ur.xpm: Ditto.
+
+	* lisp/gnus/nnagent.el: Ditto.
+
+	* lisp/gnus/nnbabyl.el: Ditto.
+
+	* lisp/gnus/nndoc.el: Ditto.
+
+	* lisp/gnus/nndraft.el: Ditto.
+
+	* lisp/gnus/nneething.el: Ditto.
+
+	* lisp/gnus/nnfolder.el: Ditto.
+
+	* lisp/gnus/nngateway.el: Ditto.
+
+	* lisp/gnus/nnheader.el: Ditto.
+
+	* lisp/gnus/nnimap.el: Ditto.
+
+	* lisp/gnus/nnkiboze.el: Ditto.
+
+	* lisp/gnus/nnlistserv.el: Ditto.
+
+	* lisp/gnus/nnmail.el: Ditto.
+
+	* lisp/gnus/nnmbox.el: Ditto.
+
+	* lisp/gnus/nnmh.el: Ditto.
+
+	* lisp/gnus/nnml.el: Ditto.
+
+	* lisp/gnus/nnoo.el: Ditto.
+
+	* lisp/gnus/nnslashdot.el: Ditto.
+
+	* lisp/gnus/nnsoup.el: Ditto.
+
+	* lisp/gnus/nnspool.el: Ditto.
+
+	* lisp/gnus/nntp.el: Ditto.
+
+	* lisp/gnus/nnultimate.el: Ditto.
+
+	* lisp/gnus/nnvirtual.el: Ditto.
+
+	* lisp/gnus/nnwarchive.el: Ditto.
+
+	* lisp/gnus/nnweb.el: Ditto.
+
+	* lisp/gnus/pop3.el: Ditto.
+
+	* lisp/gnus/post.xpm: Ditto.
+
+	* lisp/gnus/prev-ur.xpm: Ditto.
+
+	* lisp/gnus/qp.el: Ditto.
+
+	* lisp/gnus/reply-wo.xpm: Ditto.
+
+	* lisp/gnus/reply.xpm: Ditto.
+
+	* lisp/gnus/rfc1843.el: Ditto.
+
+	* lisp/gnus/rfc2045.el: Ditto.
+
+	* lisp/gnus/rfc2047.el: Ditto.
+
+	* lisp/gnus/rfc2231.el: Ditto.
+
+	* lisp/gnus/rot13.xpm: Ditto.
+
+	* lisp/gnus/save-aif.xpm: Ditto.
+
+	* lisp/gnus/save-art.xpm: Ditto.
+
+	* lisp/gnus/score-mode.el: Ditto.
+
+	* lisp/gnus/subscribe.xpm: Ditto.
+
+	* lisp/gnus/unsubscribe.xpm: Ditto.
+
+	* lisp/gnus/utf7.el: Ditto.
+
+	* lisp/gnus/uu-decode.xpm: Ditto.
+
+	* lisp/gnus/uu-post.xpm: Ditto.
+
+	* lisp/gnus/uudecode.el: Ditto.
+
+	* lisp/gnus/webmail.el: Ditto.
+
+	* lisp/international/characters.el: Ditto.
+
+	* lisp/language/cyrillic.el: Ditto.
+
+	* lisp/language/indian.el: Ditto.
+
+	* lisp/mail/mail-extr.el: Ditto.
+
+	* lisp/mail/smtpmail.el: Ditto.
+
+	* lisp/mail/supercite.el: Ditto.
+
+	* lisp/menu-bar.el: Ditto.
+
+	* lisp/mh-e/ChangeLog: Ditto.
+
+	* lisp/mh-e/mh-alias.el: Ditto.
+
+	* lisp/mh-e/mh-comp.el: Ditto.
+
+	* lisp/mh-e/mh-customize.el: Ditto.
+
+	* lisp/mh-e/mh-e.el: Ditto.
+
+	* lisp/mh-e/mh-funcs.el: Ditto.
+
+	* lisp/mh-e/mh-gnus.el: Ditto.
+
+	* lisp/mh-e/mh-identity.el: Ditto.
+
+	* lisp/mh-e/mh-inc.el: Ditto.
+
+	* lisp/mh-e/mh-index.el: Ditto.
+
+	* lisp/mh-e/mh-junk.el: Ditto.
+
+	* lisp/mh-e/mh-loaddefs.el: Ditto.
+
+	* lisp/mh-e/mh-mime.el: Ditto.
+
+	* lisp/mh-e/mh-pick.el: Ditto.
+
+	* lisp/mh-e/mh-seq.el: Ditto.
+
+	* lisp/mh-e/mh-speed.el: Ditto.
+
+	* lisp/mh-e/mh-utils.el: Ditto.
+
+	* lisp/mouse-sel.el: Ditto.
+
+	* lisp/mouse.el: Ditto.
+
+	* lisp/msb.el: Ditto.
+
+	* lisp/mwheel.el: Ditto.
+
+	* lisp/newcomment.el: Ditto.
+
+	* lisp/novice.el: Ditto.
+
+	* lisp/outline.el: Ditto.
+
+	* lisp/paren.el: Ditto.
+
+	* lisp/paths.el: Ditto.
+
+	* lisp/play/animate.el: Ditto.
+
+	* lisp/play/blackbox.el: Ditto.
+
+	* lisp/play/gamegrid.el: Ditto.
+
+	* lisp/play/landmark.el: Ditto.
+
+	* lisp/play/morse.el: Ditto.
+
+	* lisp/play/zone.el: Ditto.
+
+	* lisp/printing.el: Ditto.
+
+	* lisp/progmodes/ada-xref.el: Ditto.
+
+	* lisp/progmodes/cc-langs.el: Ditto.
+
+	* lisp/progmodes/compile.el: Ditto.
+
+	* lisp/progmodes/etags.el: Ditto.
+
+	* lisp/progmodes/gdb-ui.el: Ditto.
+
+	* lisp/progmodes/grep.el: Ditto.
+
+	* lisp/progmodes/gud.el: Ditto.
+
+	* lisp/progmodes/make-mode.el: Ditto.
+
+	* lisp/progmodes/meta-mode.el: Ditto.
+
+	* lisp/progmodes/sh-script.el: Ditto.
+
+	* lisp/progmodes/tcl.el: Ditto.
+
+	* lisp/progmodes/which-func.el: Ditto.
+
+	* lisp/simple.el: Ditto.
+
+	* lisp/term/mac-win.el: Ditto.
+
+	* lisp/term/x-win.el: Ditto.
+
+	* lisp/term/xterm.el: Ditto.
+
+	* lisp/textmodes/bibtex.el: Ditto.
+
+	* lisp/textmodes/enriched.el: Ditto.
+
+	* lisp/textmodes/flyspell.el: Ditto.
+
+	* lisp/textmodes/ispell.el: Ditto.
+
+	* lisp/textmodes/paragraphs.el: Ditto.
+
+	* lisp/textmodes/reftex-auc.el: Ditto.
+
+	* lisp/textmodes/tex-mode.el: Ditto.
+
+	* lisp/url/ChangeLog: Ditto.
+
+	* lisp/url/url-auth.el: Ditto.
+
+	* lisp/url/url-cache.el: Ditto.
+
+	* lisp/url/url-cookie.el: Ditto.
+
+	* lisp/url/url-dired.el: Ditto.
+
+	* lisp/url/url-file.el: Ditto.
+
+	* lisp/url/url-ftp.el: Ditto.
+
+	* lisp/url/url-gw.el: Ditto.
+
+	* lisp/url/url-handlers.el: Ditto.
+
+	* lisp/url/url-history.el: Ditto.
+
+	* lisp/url/url-https.el: Ditto.
+
+	* lisp/url/url-irc.el: Ditto.
+
+	* lisp/url/url-ldap.el: Ditto.
+
+	* lisp/url/url-mailto.el: Ditto.
+
+	* lisp/url/url-methods.el: Ditto.
+
+	* lisp/url/url-misc.el: Ditto.
+
+	* lisp/url/url-news.el: Ditto.
+
+	* lisp/url/url-nfs.el: Ditto.
+
+	* lisp/url/url-parse.el: Ditto.
+
+	* lisp/url/url-privacy.el: Ditto.
+
+	* lisp/url/url-util.el: Ditto.
+
+	* lisp/url/url-vars.el: Ditto.
+
+	* lisp/url/url.el: Ditto.
+
+	* lisp/calendar/icalendar.el: New file.
+
+	* lisp/gnus/ChangeLog.2: Ditto.
+
+	* lisp/gnus/TODO: Ditto.
+
+	* lisp/gnus/bar.xbm: Ditto.
+
+	* lisp/gnus/bar.xpm: Ditto.
+
+	* lisp/gnus/blink.pbm: Ditto.
+
+	* lisp/gnus/blink.xpm: Ditto.
+
+	* lisp/gnus/braindamaged.xpm: Ditto.
+
+	* lisp/gnus/canlock.el: Ditto.
+
+	* lisp/gnus/compface.el: Ditto.
+
+	* lisp/gnus/cry.xpm: Ditto.
+
+	* lisp/gnus/dead.xpm: Ditto.
+
+	* lisp/gnus/deuglify.el: Ditto.
+
+	* lisp/gnus/dig.el: Ditto.
+
+	* lisp/gnus/dns.el: Ditto.
+
+	* lisp/gnus/evil.xpm: Ditto.
+
+	* lisp/gnus/forced.xpm: Ditto.
+
+	* lisp/gnus/frown.xpm: Ditto.
+
+	* lisp/gnus/gnus-delay.el: Ditto.
+
+	* lisp/gnus/gnus-diary.el: Ditto.
+
+	* lisp/gnus/gnus-dired.el: Ditto.
+
+	* lisp/gnus/gnus-fun.el: Ditto.
+
+	* lisp/gnus/gnus-picon.el: Ditto.
+
+	* lisp/gnus/gnus-pointer.xbm: Ditto.
+
+	* lisp/gnus/gnus-pointer.xpm: Ditto.
+
+	* lisp/gnus/gnus-registry.el: Ditto.
+
+	* lisp/gnus/gnus-sieve.el: Ditto.
+
+	* lisp/gnus/important.xpm: Ditto.
+
+	* lisp/gnus/indifferent.xpm: Ditto.
+
+	* lisp/gnus/mm-extern.el: Ditto.
+
+	* lisp/gnus/mm-url.el: Ditto.
+
+	* lisp/gnus/mml-sec.el: Ditto.
+
+	* lisp/gnus/mml-smime.el: Ditto.
+
+	* lisp/gnus/mml1991.el: Ditto.
+
+	* lisp/gnus/mml2015.el: Ditto.
+
+	* lisp/gnus/nndb.el: Ditto.
+
+	* lisp/gnus/nndiary.el: Ditto.
+
+	* lisp/gnus/gnus.xbm: Ditto.
+
+	* lisp/gnus/gnus.xpm: Ditto.
+
+	* lisp/gnus/grin.xpm: Ditto.
+
+	* lisp/gnus/hex-util.el: Ditto.
+
+	* lisp/gnus/html2text.el: Ditto.
+
+	* lisp/gnus/nnmaildir.el: Ditto.
+
+	* lisp/gnus/nnnil.el: Ditto.
+
+	* lisp/gnus/nnrss.el: Ditto.
+
+	* lisp/gnus/nnwfm.el: Ditto.
+
+	* lisp/gnus/pgg-def.el: Ditto.
+
+	* lisp/gnus/pgg-gpg.el: Ditto.
+
+	* lisp/gnus/pgg-parse.el: Ditto.
+
+	* lisp/gnus/pgg-pgp.el: Ditto.
+
+	* lisp/gnus/pgg-pgp5.el: Ditto.
+
+	* lisp/gnus/pgg.el: Ditto.
+
+	* lisp/gnus/preview.xbm: Ditto.
+
+	* lisp/gnus/preview.xpm: Ditto.
+
+	* lisp/gnus/receipt.xpm: Ditto.
+
+	* lisp/gnus/reverse-smile.xpm: Ditto.
+
+	* lisp/gnus/sad.pbm: Ditto.
+
+	* lisp/gnus/sad.xpm: Ditto.
+
+	* lisp/gnus/sha1.el: Ditto.
+
+	* lisp/gnus/sieve-manage.el: Ditto.
+
+	* lisp/gnus/sieve-mode.el: Ditto.
+
+	* lisp/gnus/sieve.el: Ditto.
+
+	* lisp/gnus/smile.xpm: Ditto.
+
+	* lisp/gnus/smiley.el: Ditto.
+
+	* lisp/gnus/smime.el: Ditto.
+
+	* lisp/gnus/spam-report.el: Ditto.
+
+	* lisp/gnus/spam-stat.el: Ditto.
+
+	* lisp/gnus/spam.el: Ditto.
+
+	* lisp/gnus/unimportant.xpm: Ditto.
+
+	* lisp/gnus/wry.xpm: Ditto.
+
+	* lisp/gnus/yenc.el: Ditto.
+
+	* lisp/mh-e/mh-acros.el: Ditto.
+
+	* lisp/mh-e/mh-init.el: Ditto.
+
+	* lisp/mh-e/mh-print.el: Ditto.
+
+	* lisp/net/password.el: Ditto.
+
+	* lisp/textmodes/dns-mode.el: Ditto.
+
+	* lisp/gnus/gnus-mule.el: Removed.
+
+	* lisp/gnus/smiley-ems.el: Ditto.
+
+=======
+2004-10-26  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* progmodes/ada-xref.el: Sync up with Emacs CVS HEAD.
+
+	* progmodes/cc-langs.el: Ditto.
+
+	* progmodes/compile.el: Ditto.
+
+	* progmodes/etags.el: Ditto.
+
+	* progmodes/gdb-ui.el: Ditto.
+
+	* progmodes/grep.el: Ditto.
+
+	* progmodes/gud.el: Ditto.
+
+	* progmodes/make-mode.el: Ditto.
+
+	* progmodes/meta-mode.el: Ditto.
+
+	* progmodes/sh-script.el: Ditto.
+
+	* progmodes/tcl.el: Ditto.
+
+	* progmodes/which-func.el: Ditto.
+
+	* loaddefs.el: Update.
+
+2004-10-23  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+	* macros.el: Sync up with Emacs CVS HEAD.
+
+	* makesum.el: Ditto.
+
+	* man.el: Ditto.
+
+	* midnight.el: Ditto.
+
+	* minibuf-eldef.el: Ditto.
+
+	* misc.el: Ditto.
+
+	* mouse-copy.el: Ditto.
+
+	* mouse-drag.el: Ditto.
+
+	* pcvs-defs.el: Ditto.
+
+	* pcvs-info.el: Ditto.
+
+	* pcvs-parse.el: Ditto.
+
+	* pcvs-util.el: Ditto.
+
+	* pcvs.el: Ditto.
+
+	* printing.el: Ditto.
+
+2004-10-23  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* ChangeLog.10: Sync up with Emacs CVS HEAD.
+
+	* ChangeLog: Ditto.
+
+	* Makefile.in: Ditto.
+
+	* buff-menu.el: Ditto.
+
+	* button.el: Ditto.
+
+	* cmuscheme.el: Ditto.
+
+	* comint.el: Ditto.
+
+	* composite.el: Ditto.
+
+	* cus-start.el: Ditto.
+
+	* cvs-status.el: Ditto.
+
+	* delsel.el: Ditto.
+
+	* descr-text.el: Ditto.
+
+	* desktop.el: Ditto.
+
+	* diff-mode.el: Ditto.
+
+	* dired.el: Ditto.
+
+	* ediff-init.el: Ditto.
+
+	* edmacro.el: Ditto.
+
+	* facemenu.el: Ditto.
+
+	* faces.el: Ditto.
+
+	* help-macro.el: Ditto.
+
+	* ido.el: Ditto.
+
+	* ielm.el: Ditto.
+
+	* image.el: Ditto.
+
+	* imenu.el: Ditto.
+
+	* indent.el: Ditto.
+
+	* info-look.el: Ditto.
+
+	* isearch.el: Ditto.
+
+	* iswitchb.el: Ditto.
+
+	* kmacro.el: Ditto.
+
+	* loaddefs.el: Ditto.
+
+	* log-edit.el: Ditto.
+
+	* ls-lisp.el: Ditto.
+
+	* ps-mule.el: Ditto.
+
+	* recentf.el: Ditto.
+
+	* replace.el: Ditto.
+
+	* server.el: Ditto.
+
+	* shadowfile.el: Ditto.
+
+	* speedbar.el: Ditto.
+
+	* strokes.el: Ditto.
+
+	* tar-mode.el: Ditto.
+
+	* term.el: Ditto.
+
+	* view.el: Ditto.
+
+	* w32-fns.el: Ditto.
+
+	* x-dnd.el: Ditto.
+
+2004-10-22  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* allout.el: Sync up with Emacs CVS HEAD.
+
+	* autorevert.el: Ditto.
+
+	* avoid.el: Ditto.
+
+	* battery.el: Ditto.
+
+	* bindings.el: Ditto.
+
+	* bs.el: Ditto.
+
+	* loaddefs.el: Update.
+
+2004-10-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* info.el: Sync up with Emacs CVS HEAD except font-lock related
+	codes.
+
+	* emacs-lisp/authors.el: Sync up with Emacs CVS HEAD.
+
+	* emacs-lisp/autoload.el: Ditto.
+
+	* emacs-lisp/byte-opt.el: Ditto.
+
+	* emacs-lisp/byte-run.el: Ditto.
+
+	* emacs-lisp/bytecomp.el: Ditto.
+
+	* emacs-lisp/checkdoc.el: Ditto.
+
+	* emacs-lisp/cl-indent.el: Ditto.
+
+	* emacs-lisp/cl.el: Ditto.
+
+	* emacs-lisp/copyright.el: Ditto.
+
+	* emacs-lisp/elp.el: Ditto.
+
+	* emacs-lisp/helper.el: Ditto.
+
+	* emacs-lisp/lisp-mode.el: Ditto.
+
+	* emacs-lisp/lisp.el: Ditto.
+
+	* emacs-lisp/re-builder.el: Ditto.
+
+	* files.el: Ditto.
+
+	* font-lock.el: Ditto.
+
+	* format.el: Ditto.
+
+	* frame.el: Ditto.
+
+	* fringe.el: Ditto.
+
+	* generic.el: Ditto.
+
+	* help-at-pt.el: Ditto.
+
+	* help-fns.el: Ditto.
+
+	* help-macro.el: Ditto.
+
+	* help.el: Ditto.
+
+	* international/latin1-disp.el: Ditto.
+
+	* international/mule-util.el: Ditto.
+
+	* international/mule.el: Ditto.
+
+	* international/utf-8.el: Ditto.
+
+	* net/ange-ftp.el: Ditto.
+
+	* net/net-utils.el: Ditto.
+
+	* net/tls.el: Ditto.
+
+	* net/tramp-smb.el: Ditto.
+
+	* net/tramp.el: Ditto.
+
+	* net/trampver.el: Ditto.
+
+	* simple.el: Ditto.
+
+	* subr.el: Ditto.
+
+	* terminal.el: Ditto.
+
+	* thumbs.el: Ditto.
+
+	* vc-arch.el: Ditto.
+
+	* vc-cvs.el: Ditto.
+
+	* vc-hooks.el: Ditto.
+
+	* vc-mcvs.el: Ditto.
+
+	* vc-rcs.el: Ditto.
+
+	* vc-sccs.el: Ditto.
+
+	* vc-svn.el: Ditto.
+
+	* vc.el: Ditto.
+
+	* whitespace.el: Ditto.
+
+	* windmove.el: Ditto.
+
+	* x-dnd.el: Ditto.
+
+	* xml.el: Ditto.
+
+2004-10-17  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+	* emacs-lisp/cl-compat.el: Sync up with Emacs CVS HEAD.
+
+	* emacs-lisp/cl-extra.el: Ditto.
+
+	* emacs-lisp/cl-indent.el: Ditto.
+
+	* emacs-lisp/cl-specs.el: Ditto.
+
+	* emacs-lisp/cl-seq.el: Ditto.
+
+	* emacs-lisp/cl.el: Ditto.
+
+	* emacs-lisp/autoload.el: Partially sync up with Emacs CVS HEAD.
+
+	* emacs-lisp/byte-opt.el: Ditto.
+
+	* emacs-lisp/cl-macs.el: Ditto.
+
+2004-10-17  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* emacs-lisp/advice.el: Sync up with Emacs CVS HEAD.
+
+	* emacs-lisp/assoc.el: Ditto.
+
+	* emacs-lisp/authors.el: Ditto.
+
+	* emacs-lisp/backquote.el: Ditto.
+
+	* emacs-lisp/checkdoc.el: Ditto.
+
+	* emacs-lisp/copyright.el: Ditto.
+
+	* emacs-lisp/crm.el: Ditto.
+
+	* emacs-lisp/cust-print.el: Ditto.
+
+	* emacs-lisp/debug.el: Ditto.
+
+	* emacs-lisp/disass.el: Ditto.
+
+	* emacs-lisp/easy-mmode.el: Ditto.
+
+	* emacs-lisp/easymenu.el: Ditto.
+
+	* emacs-lisp/edebug.el: Ditto.
+
+	* emacs-lisp/eldoc.el: Ditto.
+
+	* emacs-lisp/elint.el: Ditto.
+
+	* emacs-lisp/elp.el: Ditto.
+
+	* emacs-lisp/ewoc.el: Ditto.
+
+	* emacs-lisp/find-gc.el: Ditto.
+
+	* emacs-lisp/float-sup.el: Ditto.
+
+	* emacs-lisp/gulp.el: Ditto.
+
+	* emacs-lisp/levents.el: Ditto.
+
+	* emacs-lisp/lisp-mnt.el: Ditto.
+
+	* emacs-lisp/lisp-mode.el: Ditto.
+
+	* emacs-lisp/lisp.el: Ditto.
+
+	* emacs-lisp/lmenu.el: Ditto.
+
+	* emacs-lisp/lselect.el: Ditto.
+
+	* emacs-lisp/lucid.el: Ditto.
+
+	* emacs-lisp/map-ynp.el: Ditto.
+
+	* emacs-lisp/pp.el: Ditto.
+
+	* emacs-lisp/re-builder.el: Ditto.
+
+	* emacs-lisp/regexp-opt.el: Ditto.
+
+	* emacs-lisp/ring.el: Ditto.
+
+	* emacs-lisp/rx.el: Ditto.
+
+	* emacs-lisp/shadow.el: Ditto.
+
+	* emacs-lisp/sregex.el: Ditto.
+
+	* emacs-lisp/timer.el: Ditto.
+
+	* emacs-lisp/tq.el: Ditto.
+
+	* emacs-lisp/trace.el: Ditto.
+
+	* emacs-lisp/benchmark.el: New file.
+
+	* emacs-lisp/bindat.el: Ditto.
+
+	* emacs-lisp/macroexp.el: Ditto.
+
+	* emacs-lisp/regi.el: Ditto.
+
+	* emacs-lisp/tcover-ses.el: Ditto.
+
+	* emacs-lisp/tcover-unsafep.el: Ditto.
+
+	* emacs-lisp/testcover.el: Ditto.
+
+	* emacs-lisp/unsafep.el: Ditto.
+
+	* emacs-lisp/warnings.el: Ditto.
+
+	* emacs-lisp/float.el: Removed.
+
+2004-10-17  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* simple.el (kill-region): Sync up with Emacs CVS HEAD.
+
+2004-10-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* ChangeLog: Sync up with Emacs CVS HEAD.
+
+	* sb-dir-minus.xpm: Ditto.
+
+	* sb-dir-plus.xpm: Ditto.
+
+	* sb-dir.xpm: Ditto.
+
+	* sb-mail.xpm: Ditto.
+
+	* sb-pg-minus.xpm: Ditto.
+
+	* sb-pg-plus.xpm: Ditto.
+
+	* sb-pg.xpm: Ditto.
+
+	* sb-tag-gt.xpm: Ditto.
+
+	* sb-tag-minus.xpm: Ditto.
+
+	* sb-tag-plus.xpm: Ditto.
+
+	* sb-tag-type.xpm: Ditto.
+
+	* sb-tag-v.xpm: Ditto.
+
+	* sb-tag.xpm: Ditto.
+
+	* tabify.el: Ditto.
+
+	* talk.el: Ditto.
+
+	* tar-mode.el: Ditto.
+
+	* tempo.el: Ditto.
+
+	* term.el: Ditto.
+
+	* terminal.el: Ditto.
+
+	* thingatpt.el: Ditto.
+
+	* time-stamp.el: Ditto.
+
+	* time.el: Ditto.
+
+	* timezone.el: Ditto.
+
+	* tmm.el: Ditto.
+
+	* tooltip.el: Ditto.
+
+	* type-break.el: Ditto.
+
+	* uniquify.el: Ditto.
+
+	* userlock.el: Ditto.
+
+	* vc-cvs.el: Ditto.
+
+	* vc-hooks.el: Ditto.
+
+	* vc-rcs.el: Ditto.
+
+	* vc-sccs.el: Ditto.
+
+	* vc.el: Ditto.
+
+	* vcursor.el: Ditto.
+
+	* version.el: Ditto.
+
+	* view.el: Ditto.
+
+	* vms-patch.el: Ditto.
+
+	* vmsproc.el: Ditto.
+
+	* vt-control.el: Ditto.
+
+	* vt100-led.el: Ditto.
+
+	* whitespace.el: Ditto.
+
+	* wid-browse.el: Ditto.
+
+	* wid-edit.el: Ditto.
+
+	* widget.el: Ditto.
+
+	* window.el: Ditto.
+
+	* winner.el: Ditto.
+
+	* woman.el: Ditto.
+
+	* xml.el: Ditto.
+
+	* xt-mouse.el: Ditto.
+
+	* which-func.el: Removed.
+
+	* xscheme.el: Ditto.
+
+	* vc-arch.el: New file.
+
+	* vc-mcvs.el: Ditto.
+
+	* vc-svn.el: Ditto.
+
+	* wdired.el: Ditto.
+
+2004-10-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* pcvs.el: Sync up with Emacs CVS HEAD.
+
+	* recentf.el: Ditto.
+
+	* rect.el: Ditto.
+
+	* register.el: Ditto.
+
+	* repeat.el: Ditto.
+
+	* replace.el: Ditto.
+
+	* reposition.el: Ditto.
+
+	* resume.el: Ditto.
+
+	* rot13.el: Ditto.
+
+	* s-region.el: Ditto.
+
+	* saveplace.el: Ditto.
+
+	* scroll-all.el: Ditto.
+
+	* scroll-bar.el: Ditto.
+
+	* select.el: Ditto.
+
+	* server.el: Ditto.
+
+	* shadowfile.el: Ditto.
+
+	* shell.el: Ditto.
+
+	* skeleton.el: Ditto.
+
+	* smerge-mode.el: Ditto.
+
+	* sort.el: Ditto.
+
+	* soundex.el: Ditto.
+
+	* speedbar.el: Ditto.
+
+	* strokes.el: Ditto.
+
+2004-10-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* patcomp.el: Sync up with Emacs CVS HEAD.
+
+	* paths.el: Ditto.
+
+	* pcmpl-cvs.el: Ditto.
+
+	* pcmpl-gnu.el: Ditto.
+
+	* pcmpl-linux.el: Ditto.
+
+	* pcmpl-rpm.el: Ditto.
+
+	* pcmpl-unix.el: Ditto.
+
+	* pcomplete.el: Ditto.
+
+	* pcvs-defs.el: Ditto.
+
+	* pcvs-info.el: Ditto.
+
+	* pcvs-parse.el: Ditto.
+
+	* pcvs-util.el: Ditto.
+
+	* ps-bdf.el: Ditto.
+
+	* ps-mule.el: Ditto.
+
+	* ps-print.el: Ditto.
+
+	* subr.el: Ditto.
+
+	* regi.el: Removed.
+
+	* tcp.el: Ditto.
+
+	* unused.el: Ditto.
+
+	* printing.el: New file.
+
+	* reveal.el: Ditto.
+
+	* rfn-eshadow.el: Ditto.
+
+	* ruler-mode.el: Ditto.
+
+	* ses.el: Ditto.
+
+	* thumbs.el: Ditto.
+
+	* tree-widget.el: Ditto.
+
+2004-10-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (init-image-library): New function.
+
+	* cus-load.el: Update.
+
+	* emacs-lisp/autoload.el: Sync up with Emacs CVS HEAD.
+
+	* format.el: Ditto.
+
+	* forms-d2.el: Ditto.
+
+	* forms-pass.el: Ditto.
+
+	* forms.el: Ditto.
+
+	* frame.el: Ditto.
+
+	* generic-x.el: Ditto.
+
+	* generic.el: Ditto.
+
+	* gs.el: Ditto.
+
+	* hexl.el: Ditto.
+
+	* hi-lock.el: Ditto.
+
+	* hilit-chg.el: Ditto.
+
+	* hippie-exp.el: Ditto.
+
+	* hl-line.el: Ditto.
+
+	* icomplete.el: Ditto.
+
+	* ielm.el: Ditto.
+
+	* image-file.el: Ditto.
+
+	* image.el: Ditto.
+
+	* imenu.el: Ditto.
+
+	* indent.el: Ditto.
+
+	* info-look.el: Ditto.
+
+	* info.el: Ditto.
+
+	* informat.el: Ditto.
+
+	* isearch.el: Ditto.
+
+	* iswitchb.el: Ditto.
+
+	* jit-lock.el: Ditto.
+
+	* jka-compr.el: Ditto.
+
+	* kermit.el: Ditto.
+
+	* lazy-lock.el: Ditto.
+
+	* ledit.el: Ditto.
+
+	* loaddefs.el: Ditto.
+
+	* loadhist.el: Ditto.
+
+	* locate.el: Ditto.
+
+	* log-edit.el: Ditto.
+
+	* log-view.el: Ditto.
+
+	* lpr.el: Ditto.
+
+	* ls-lisp.el: Ditto.
+
+	* ido.el: New file.
+
+	* iimage.el: Ditto.
+
+	* info-xref.el: Ditto.
+
+	* isearchb.el: Ditto.
+
+	* kmacro.el: Ditto.
+
+	* ldefs-boot.el: Ditto.
+
+	* master.el: Ditto.
+
+	* gud.el: Removed.
+
+	* ispell4.el: Ditto.
+
+	* international/meadow.el:
+
+2004-10-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* abbrev.el: Sync up with Emacs CVS HEAD.
+
+	* abbrevlist.el: Ditto.
+
+	* add-log.el: Ditto.
+
+	* align.el: Ditto.
+
+	* allout.el: Ditto.
+
+	* ansi-color.el: Ditto.
+
+	* apropos.el: Ditto.
+
+	* arc-mode.el: Ditto.
+
+	* array.el: Ditto.
+
+	* autoarg.el: Ditto.
+
+	* autoinsert.el: Ditto.
+
+	* autorevert.el: Ditto.
+
+	* avoid.el: Ditto.
+
+	* battery.el: Ditto.
+
+	* bindings.el: Ditto.
+
+	* bookmark.el: Ditto.
+
+	* bs.el: Ditto.
+
+	* buff-menu.el: Ditto.
+
+	* calculator.el: Ditto.
+
+	* case-table.el: Ditto.
+
+	* cdl.el: Ditto.
+
+	* chistory.el: Ditto.
+
+	* cmuscheme.el: Ditto.
+
+	* comint.el: Ditto.
+
+	* compare-w.el: Ditto.
+
+	* complete.el: Ditto.
+
+	* completion.el: Ditto.
+
+	* composite.el: Ditto.
+
+	* cus-dep.el: Ditto.
+
+	* cus-edit.el: Ditto.
+
+	* cus-face.el: Ditto.
+
+	* cus-load.el: Ditto.
+
+	* cus-start.el: Ditto.
+
+	* custom.el: Ditto.
+
+	* cvs-status.el: Ditto.
+
+	* dabbrev.el: Ditto.
+
+	* delim-col.el: Ditto.
+
+	* delsel.el: Ditto.
+
+	* desktop.el: Ditto.
+
+	* diff-mode.el: Ditto.
+
+	* diff.el: Ditto.
+
+	* dired-aux.el: Ditto.
+
+	* dired-x.el: Ditto.
+
+	* dired.el: Ditto.
+
+	* dirtrack.el: Ditto.
+
+	* disp-table.el: Ditto.
+
+	* dos-fns.el: Ditto.
+
+	* dos-vars.el: Ditto.
+
+	* dos-w32.el: Ditto.
+
+	* double.el: Ditto.
+
+	* ebuff-menu.el: Ditto.
+
+	* echistory.el: Ditto.
+
+	* ediff-diff.el: Ditto.
+
+	* ediff-help.el: Ditto.
+
+	* ediff-hook.el: Ditto.
+
+	* ediff-init.el: Ditto.
+
+	* ediff-merg.el: Ditto.
+
+	* ediff-mult.el: Ditto.
+
+	* ediff-ptch.el: Ditto.
+
+	* ediff-util.el: Ditto.
+
+	* ediff-vers.el: Ditto.
+
+	* ediff-wind.el: Ditto.
+
+	* ediff.el: Ditto.
+
+	* edmacro.el: Ditto.
+
+	* ehelp.el: Ditto.
+
+	* electric.el: Ditto.
+
+	* elide-head.el: Ditto.
+
+	* emacs-lisp/byte-run.el: Ditto.
+
+	* emacs-lock.el: Ditto.
+
+	* emerge.el: Ditto.
+
+	* expand.el: Ditto.
+
+	* faces.el: Ditto.
+
+	* fast-lock.el: Ditto.
+
+	* ffap.el: Ditto.
+
+	* filecache.el: Ditto.
+
+	* files.el: Ditto.
+
+	* find-dired.el: Ditto.
+
+	* find-lisp.el: Ditto.
+
+	* finder-inf.el: Ditto.
+
+	* finder.el: Ditto.
+
+	* flow-ctrl.el: Ditto.
+
+	* foldout.el: Ditto.
+
+	* follow.el: Ditto.
+
+	* font-lock.el: Ditto.
+
+	* loaddefs.el: Ditto.
+
+	* loadup.el: Ditto.
+
+	* simple.el: Ditto.
+
+	* subr.el: Ditto.
+
+	* calc/: Set props to ignore *.elc.
+
+	* mh-e/: Ditto.
+
+	* obsolete/: Ditto.
+
+	* url/: Ditto.
+
+	* cus-theme.el: New file.
+
+	* emacs-lisp/derived.el: Ditto.
+
+	* emacs-lisp/syntax.el: Ditto.
+
+	* filesets.el: Ditto.
+
+	* font-core.el: Ditto.
+
+	* outline.el: Ditto.
+
+	* x-dnd.el: Ditto.
+
+	* derived.el: Removed.
+
+	* enriched.el: Ditto.
+
+	* env.el: Ditto.
+
+	* term/x-dnd.el: Ditto.
+
+	* ChangeLog.*: Sync up with Emacs CVS HEAD.
+
+2004-10-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* subr.el (delayed-mode-hooks): New variable.
+	(run-mode-hooks): New function.
+	(delay-mode-hooks): New macro.
+	(derived-mode-p): New function.
+
+	* makefile.meadow.w32-in (WINS): Update.
+	(loaddefs.el): Update.
+
+	* makefile.nt (WINS): Update.
+	(loaddefs.el): Update.
+
+	* frame.el (iconify-or-deiconify-frame): New function.
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* calendar: Sync up with Emacs CVS HEAD.
+
+	* emulation: Ditto.
+
+	* eshell: Ditto.
+
+	* mail: Ditto.
+
+	* net: Ditto.
+
+	* obsolete/auto-show.el: Ditto.
+
+	* progmodes/ada-mode.el: Ditto.
+
+	* subdirs.el: Ditto
+
+	* term: Ditto.
+
+	* textmodes: Ditto.
+
+	* calc: New directory and files form Emacs CVS HEAD.
+
+	* mh-e: Ditto.
+
+	* url: Ditto.
+
+2004-10-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loadup.el ("language/utf-8-lang"): Sync up with Emacs CVS HEAD.
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* language/tamil.el: New file from Emacs CVS HEAD.
+
+	* emacs-lisp/byte-run.el: Moved from `..'.
+
+	* emacs-lisp/timer.el: Ditto.
+
+	* emacs-lisp/map-ynp.el: Ditto.
+
+	* emacs-lisp/float-sup.el: Ditto.
+
+2004-10-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/characters.el: Sync up with Emacs CVS HEAD.
+
+	* international/mule-conf.el: Ditto.
+
+	* international/fontset.el: Ditto.
+
+	* language: Ditto.
+
+	* gnus: Sync up with Emacs CVS HEAD.
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+2004-10-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* lisp/international/characters.el: Sync up with Emacs CVS HEAD
+	except codes related with `indian-glyph'.
+
+	* lisp/international/fontset.el: Ditto.
+
+	* lisp/international/mule-conf.el: Ditto.
+
+	* international/codepage.el: Sync up with Emacs CVS HEAD.
+
+	* lisp/international/codepage.el: Ditto.
+
+	* lisp/international/encoded-kb.el: Ditto.
+
+	* lisp/international/isearch-x.el: Ditto.
+
+	* lisp/international/iso-acc.el: Ditto.
+
+	* lisp/international/iso-ascii.el: Ditto.
+
+	* lisp/international/iso-cvt.el: Ditto.
+
+	* lisp/international/iso-insert.el: Ditto.
+
+	* lisp/international/iso-swed.el: Ditto.
+
+	* lisp/international/iso-transl.el: Ditto.
+
+	* lisp/international/ja-dic-cnv.el: Ditto.
+
+	* lisp/international/ja-dic-utl.el: Ditto.
+
+	* lisp/international/kinsoku.el: Ditto.
+
+	* lisp/international/kkc.el: Ditto.
+
+	* lisp/international/latin1-disp.el: Ditto.
+
+	* lisp/international/mule-cmds.el: Ditto.
+
+	* lisp/international/ogonek.el: Ditto.
+
+	* lisp/international/quail.el: Ditto.
+
+	* lisp/international/swedish.el: Ditto.
+
+	* lisp/international/titdic-cnv.el: Ditto.
+
+	* international/code-pages.el: New file from Emacs CVS HEAD.
+
+	* international/subst-ksc.el: Ditto.
+
+	* international/subst-jis.el: Ditto.
+
+	* international/subst-gb2312.el: Ditto.
+
+	* international/subst-big5.el: Ditto.
+
+	* term/w32-win.el: Call setup-default-fontset() to setup the
+	default fontset.
+
+	* loaddefs.el: Update.
+
+	* cus-load.el: Update.
+
+2004-10-13  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.nt (bootstrap-clean): Use $(MAKEDIR) instead of
+	$(lisp).
+
+2004-10-13  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mule.el (after-insert-file-functions): Add a
+	temporary hook. This should be removed.
+
+	* international/mule-diag.el (describe-char-after): Removed.
+
+	* descr-text.el: New file from Emacs CVS HEAD.
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+2004-10-11  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+	* international/mule-util.el: Sync up with Emacs CVS HEAD.
+
+	* international/latin-1.el: Ditto.
+
+	* international/latin-2.el: Ditto.
+
+	* international/latin-3.el: Ditto.
+
+	* international/latin-4.el: Ditto.
+
+	* international/latin-5.el: Ditto.
+
+	* international/latin-8.el: Ditto.
+
+	* international/latin-9.el: Ditto.
+
+2004-10-11  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/ccl.el: Sync up with Emacs CVS HEAD.
+
+	* lisp/international/ccl.el: Ditto.
+
+	* lisp/international/mule.el: Ditto.
+
+	* lisp/international/ucs-tables.el: Ditto.
+
+	* lisp/international/utf-16.el: Ditto.
+
+	* lisp/international/utf-8.el: Ditto.
+
+	* lisp/international/utf-7.el: New file from Emacs CVS HEAD.
+
+	* cus-load.el: Update.
+
+	* loaddefs.el: Ditto.
+
+	* files.el (set-auto-mode-1): New function from Emacs CVS HEAD.
+
+2004-10-03  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* bindings.el ([switch-frame]): New bindings.
+	([select-window]): Ditto.
+	([delete-frame]): Ditto.
+	([iconify-frame]): Ditto.
+	([make-frame-visible]): Ditto.
+
+2004-10-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.nt (lisp): Use `MAKEDIR' instead of `.'.
+
+	* loaddefs.el: Update.
+
+	* cus-load.el: Update.
+
+	* emacs-lisp/find-func.el: Sync up with Emacs CVS HEAD.
+
+2004-09-25  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* windmove.el: Sync up with Emacs CVS HEAD.
+
+	* loaddefs.el: Update.
+
+2004-09-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* fringe.el: New file from Emacs CVS HEAD.
+
+	* loaddefs.el: Update.
+
+2004-09-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+	* international/mule-diag.el (describe-char-after): Revive the
+	removed function.
+
+2004-09-09  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loaddefs.el: Update.
+
+	* subr.el (define-key-after): Sync up with Emacs CVS HEAD.
+
+	* international/mule-cmds.el (describe-input-method): Sync up with
+	Emacs CVS HEAD.
+	(describe-language-environment): Ditto.
+
+2004-09-08  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mule-diag.el: Sync up with Emacs CVS HEAD.
+
+2004-09-05  Masayuki FUJII  <boochang@m4.kcn.ne.jp>
+
+	* subr.el (insert-string): Moved from mocklisp.c, reimplemented in
+	Lisp and Obsoleted.
+
+2004-08-29  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* help-fns.el (describe-variable): Invalidate codes involved with
+	indirect-variable().
+
+2004-08-23  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* faces.el (read-face-name): Sync up with Emacs CVS HEAD.
+
+2004-08-23  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* faces.el (list-faces-display): Sync up with Emacs CVS HEAD.
+	(describe-face): Ditto.
+
+2004-08-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* subr.el (minor-mode-list): New variable from Emacs CVS HEAD.
+
+	* bindings.el (completion-ignored-extensions): Sync up with Emacs
+	CVS HEAD.
+	(exec-suffixes): New variable from Emacs CVS HEAD.
+
+2004-08-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* dired.el (dired-find-alternate-file): Call
+	dired-get-file-for-visit() instead of dired-get-filename().
+	(dired-find-file-other-window): Ditto.
+	(dired-display-file): Ditto.
+
+2004-08-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* subr.el (symbol-file): New function from Emacs CVS HEAD.
+	(eval-after-load): Sync up with Emacs CVS HEAD.
+
+	* loaddefs.el: Update.
+
+	* help.el: Sync up with Emacs CVS HEAD.
+
+	* help-mode.el: New file from Emacs CVS HEAD.
+
+	* help-fns.el: Ditto.
+
+	* help-at-pt.el: Ditto.
+
+	* files.el (read-directory-name): New function from Emacs CVS
+	HEAD.
+	(locate-file): Ditto.
+	(locate-file-completion): Ditto.
+	(cd): Sync up with Emacs CVS HEAD.
+	(load-library): Ditto.
+
+	* emacs-lisp/find-func.el (find-library-suffixes): New function
+	from Emacs CVS HEAD.
+	(find-library-name): Ditto.
+	(find-function-C-source): Ditoo.
+	(find-library): Ditto.
+	(find-function-C-source-directory): New variable from Emacs CVS
+	HEAD.
+	(find-function-search-for-symbol): Sync up with Emacs CVS HEAD.
+	(find-variable-noselect): Ditto.
+
+	* custom.el (custom-variable-p): New function from Emacs CVS HEAD.
+
+	* cus-load.el: Update.
+
+	* button.el: New file from Emacs CVS HEAD.
+
+2004-08-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* loadup.el: Sync up with Emacs CVS HEAD.
+
+	* subr.el (define-mail-user-agent): New function from simple.el.
+
+	* simple.el (define-mail-user-agent): Removed.
+
+	* loaddefs.el: Update.
+
+	* cus-load.el: Ditto.
+
+2004-08-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* find-file.el: Sync up with Emacs CVS HEAD.
+
+2004-08-13  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* makefile.nt (install): Install the whole of this directory.
+
+2004-08-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* toolbar/README: New file from Emacs CVS HEAD.
+
+	* toolbar/*.pbm: Sync up with Emacs CVS HEAD.
+
+	* toolbar/*.xpm: Ditto.
+
+	* toolbar/tool-bar.el: Ditto.
+
+2004-08-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (before-init-hook): Don't append extra
+	extensions which ImageMagick cannot handle.
+
+2004-08-09  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (before-init-hook): Exclude unnecessary
+	extensions for image files.
+
+2004-08-09  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el (before-init-hook): Append extra
+	extensions for image files.
+
+	* image.el (image-type-from-data): Call mw32-get-image-magick() to
+	determine the image type.
+
+	* image-file.el (auto-image-file-mode): Bind max-specpdl-size to
+	10000 temporarily for variable binding depth not to exceed
+	max-specpdl-size.
+
+2004-07-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* play/*.el: Sync up Emacs CVS HEAD.
+
+	* net/*.el: Ditto.
+
+	* loaddefs.el: Update.
+
+	* cus-load.el: Ditto.
+
+	* ange-ftp.el: Moved to `net/'.
+
+2004-07-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* dired.el (dired-view-command-alist): New alist from Emacs CVS
+	HEAD.
+
+2004-07-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* isearch.el (isearch-message-prefix): Sync up with Emacs CVS
+	HEAD.
+
+	* faces.el (minibuffer-prompt): New face from Emacs CVS
+	HEAD. And append this face to `minibuffer-prompt-properties'.
+
+2004-07-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/meadow.el: Don't overwrite appearances
+	temporarily.
+
+	* faces.el: New face from Emacs CVS HEAD.
+
+2004-07-16  Masayuki Fujii  <boochang@m4.kcn.ne.jp>
+
+	* emacs-lisp/bytecomp.el (byte-recompile-directory): Sync up with
+	Emacs CVS HEAD.
+
+2004-07-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* dired.el (dired-view-file): Sync up with Emacs CVS HEAD.
+
+2004-07-11  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* startup.el (fancy-splash-check-screen): Improve the condition to
+	stop splashing.
+
+2004-07-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* dired.el (dired-get-file-for-visit): New function form Emacs CVS
+	HEAD.
+	(dired-find-file): Sync up with Emacs CVS HEAD.
+
+2004-07-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* dired.el (dired-re-dot): Sync up with Emacs CVS HEAD.
+	(dired-get-filename): Ditto.
+
+2004-07-07  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* Meadow 2.00 (KIKYOU) Release.
+
+2004-07-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* international/mule.el (register-char-codings): Revert to
+	Emacs-21.1.
+
+2004-06-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* menu-bar.el (menu-bar-options-save): Allways save variables
+	regardless of their values.
+
+2004-06-25  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* startup.el (fancy-splash-check-screen): New function which
+	checks if the current buffer is for splash screens.
+	(fancy-splash-screens): Call `fancy-splash-check-screen'
+	repeatedly.
+
+2004-06-06  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* ls-lisp.el (ls-lisp-insert-directory): Remove the second
+	argument of file-attributes().
+
+2004-06-05  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Merge changes from 2.00 branch.
+
+2004-06-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* ls-lisp.el (ls-lisp-insert-directory): Sync up with Emacs CVS
+	HEAD. Thanks to Katsumi Yamaoka <yamaoka@jpl.org>.
+
+2004-05-05  ARISAWA Akihiro  <ari@mbf.sphere.ne.jp>
+
+	* international/mw32misc.el (ccl-encode-cp1250-font,
+	ccl-encode-cp1253-font, ccl-encode-cp1257-font): New font encoder.
+	(encode-cp1250-font, encode-cp1253-font, encode-cp1257-font):
+	Register them.
+	(w32-charset-encoding-alist): Set them as font encoder.
+
+2004-04-25  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* emacs-lisp/regexp-opt.el (regexp-opt-depth): Sync up with
+	revision 1.18.
+
+	* isearch.el (isearch-no-upper-case-p): Sync up with
+	Emacs-21.3.50.
+
+2004-01-05  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el (fancy-splash-tail): Update the year of
+	copyright.
+
+2003-12-29  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* Sync up with Emacs-21.3.
+
+2003-12-28  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* Sync up with Emacs-21.2.
+
+2003-11-15  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.nt (EMACSLOADPATH): Set EMACSLOADPATH to override the
+	value in the registry.
+
+2003-11-15  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* emacs-lisp/bytecomp.el (byte-recompile-directory): Sync up with
+	Emacs-21.3.50 to support `no-byte-compile'.
+	(byte-compile-file): Ditto.
+
+	* version.el: Bind no-byte-compile to t.
+
+	* term/wyse50.el: Ditto.
+
+	* term/vt420.el: Ditto.
+
+	* term/vt400.el: Ditto.
+
+	* term/vt320.el: Ditto.
+
+	* term/vt300.el: Ditto.
+
+	* term/vt240.el: Ditto.
+
+	* term/vt220.el: Ditto.
+
+	* term/vt201.el: Ditto.
+
+	* term/vt200.el: Ditto.
+
+	* term/vt125.el: Ditto.
+
+	* term/vt102.el: Ditto.
+
+	* term/news.el: Ditto.
+
+	* term/lk201.el: Ditto.
+
+	* term/linux.el: Ditto.
+
+	* term/keyswap.el: Ditto.
+
+	* term/iris-ansi.el: Ditto.
+
+	* term/internal.el: Ditto.
+
+	* term/bobcat.el: Ditto.
+
+	* term/apollo.el: Ditto.
+
+	* term/AT386.el: Ditto.
+
+	* subdirs.el: Ditto.
+
+	* paths.el: Ditto.
+
+	* patcomp.el: Ditto.
+
+	* mail/blessmail.el: Ditto.
+
+	* loadup.el: Ditto.
+
+	* language/thai.el: Ditto.
+
+	* language/slovak.el: Ditto.
+
+	* language/romanian.el: Ditto.
+
+	* language/misc-lang.el: Ditto.
+
+	* language/lao.el: Ditto.
+
+	* language/korean.el: Ditto.
+
+	* language/japanese.el: Ditto.
+
+	* language/hebrew.el: Ditto.
+
+	* language/greek.el: Ditto.
+
+	* language/english.el: Ditto.
+
+	* language/devanagari.el: Ditto.
+
+	* language/czech.el: Ditto.
+
+	* international/mule-conf.el: Ditto.
+
+	* international/latin-9.el: Ditto.
+
+	* international/latin-8.el: Ditto.
+
+	* international/latin-5.el: Ditto.
+
+	* international/latin-4.el: Ditto.
+
+	* international/latin-3.el: Ditto.
+
+	* international/latin-2.el: Ditto.
+
+	* international/latin-1.el: Ditto.
+
+	* generic-x.el: Ditto.
+
+	* forms-pass.el: Ditto.
+
+	* forms-d2.el: Ditto.
+
+	* eshell/esh-module.el: Ditto.
+
+	* eshell/esh-maint.el: Ditto.
+
+	* emacs-lisp/cl-specs.el: Ditto.
+
+2003-10-22  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* makefile.meadow.w32-in (compile-files): Fix. Do not byte-compile
+	`DONTCOMPILE'.
+
+2003-10-15  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in (install): Modify path separators for
+	xcopy.
+
+2003-09-18  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* term/w32-win.el: Call w32-activate-menu-bar() instead of
+	w32-send-sys-command() to activate the menubar.
+
+2003-08-27  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el (fancy-splash-tail): Add copyright
+	notices of Meadow.
+
+2003-08-26  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el (mw32-splash-masked-p): New variable.
+	(fancy-splash-head): Use ImageMagick image decoder if possible.
+	Apply `:heuristic-mask' if mw32-splash-masked-p is non-nil.
+	(fancy-splash-head): Set link to `http://www.meadowy.org/'.
+	(fancy-splash-tail): New function to override the original one.
+
+2003-08-26  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/mw32misc.el (w32-activate-menu-bar): New function.
+	(w32-activate-start-menu): Ditto.
+	(w32-set-monitor-state): Ditto.
+	(w32-maximize-frame): Ditto.
+	(w32-restore-frame): Ditto.
+
+2003-07-07  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* international/meadow.el (w32-focus-frame): Define alias.
+
+2003-07-05  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el (before-init-hook): Register image types
+	of `BMP' and `bmp' with before-init-hook.
+	Swap the priority of `bmp' and that of `BMP'.
+	(display-images-p): Fix a typo.
+	(w32-enum-logfont-cache-file): Removed.
+	(w32-enum-logfont-cache): Ditto.
+	(w32-enum-logfont): Ditto.
+
+2003-06-09  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/mw32misc.el (mw32-load-lf-from-request): Remove
+	the acutally unused argument "option".
+	(change-fontset-from-request): Check the property number with
+	bitwise-and.  And if the property bit is not set, clear the value
+	of the corresponding key to normal.
+	(change-fontset-from-request-with-spec): Bug fix.  We had to
+	pass "finfo" when adding a new spec. key.
+
+2003-05-30  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el (x-display-pixel-width): Set the
+	argument optional.
+	(x-display-pixel-height): Ditto.
+	(x-display-mm-height): Ditto.
+	(x-display-mm-width): Ditto.
+	(x-display-visual-class): Ditto.
+	(x-server-max-request-size): Ditto.
+	(x-server-vendor): Ditto.
+	(x-server-version): Ditto.
+	(x-display-screens): Ditto.
+	(x-display-backing-store): Ditto.
+	(x-display-save-under): Ditto.
+	(x-display-planes): Ditto.
+	Renamed from x-display-pixel-planes.
+
+2003-05-28  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/meadow.el (mw32-emulate-x-display-argument): New
+	function.
+	(x-display-pixel-width, x-display-pixel-height)
+	(x-display-pixel-planes, x-display-mm-height, x-display-mm-width)
+	(x-display-visual-class): New functions.
+	(x-server-max-request-size, x-server-vendor, x-server-version)
+	(x-display-screens, x-display-backing-store)
+	(x-display-save-under): New functions, but they only return
+	a predefined value.
+
+2003-05-27  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/mw32misc.el (mw32-convert-fr-spec-to-vec):
+	New function.
+	(mw32-convert-font-legacy-strict-spec): New function.
+	(mw32-convert-font-request-alist): It is a reviced version
+	of mw32-convert-font-request-attribute.  Now it deals with 'spec
+	key.  Note that it converts 'strict-spec key with
+	mw32-convert-font-legacy-strict-spec.
+	(w32-add-font): Use mw32-convert-font-request-alist.
+	(w32-change-font): Fix the name of w32-change-add-font.
+	(logfont-from-char-and-request): New function.
+	(mw32-build-font-spec): Removed.
+	(mw32-face-attrs-weight-alist): New alist.
+	(mw32-convert-face-attrs-to-request): New function.
+	(mw32-load-lf-from-request): New function.
+	(create-fontset-from-request-with-spec): New function.
+	(change-fontset-from-request-with-spec): New function.
+	(create-fontset-from-request): Totally rewritten, use
+	create-fontset-from-request-with-spec to build a new
+	fontset (actually a FR).
+	(change-fontset-from-request): Likewise.
+
+2003-03-24  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/mw32misc.el (mw32-charset-windows-font-info-alist):
+	Set the encoding of chinese-gb2312 and korean-ksc5601 to
+	2-byte-set-msb.
+
+2003-03-09  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/mw32misc.el (mw32-convert-font-request-attribute):
+	Undo the last change. These codes are moved to
+	mw32_check_font_request_alist() in mw32font.c.
+
+2003-03-09  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/mw32misc.el (mw32-windows-font-charset-database):
+	Don't init. it here.  It was removed.
+	(w32-default-logfont): Removed.  It is obsolete.
+	(w32-automatic-font-regist, w32-generate-tribial-logfont-list):
+	Ditto.
+	(w32-regist-initial-font, w32-automatic-fontset-regist
+	(w32-auto-regist-bdf-font): Now it takes <encoding> not
+	<encoding-type> nor <encoder> as the third argument.
+
+2003-03-08  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/mw32misc.el (mw32-convert-font-request-attribute):
+	Check values of font option.
+
+2003-03-08  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/mw32misc.el (w32-regist-font-encoder):
+	Add a new argument, byte.
+	(encode-koi8-font, encode-alternativnyj-font, encode-big5-font)
+	(encode-viscii-font, encode-ethio-font, encode-cp1251-font):
+	Suffice "byte" arguemnt properly.
+	(mw32-charset-windows-font-info-alist): Now the third item must be
+	a <encoding>.  Fix all the members in it.
+	(mw32-windows-font-charset-database): Now set <encoder> as its
+	slot.
+
+2003-03-01  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* loadup.el: Add international/mw32mci.el.
+
+	* international/mw32mci.el (mw32-mci-add-notify-callback): New
+	function.
+	(mw32-mci-remove-notify-callback): Ditto.
+	(mw32-mci-notify-event-handler): Ditto.
+	(mw32-mci-handle-event): Ditto.
+	(special-event-map): Add mw32-mci-handle-event.
+	(mw32-mci-notify-func): New function.
+	(parse-sound): Ditto.
+	(play-sound): Ditto.
+
+	* mail/sendmail.el (mail-font-lock-keywords): Sync up with 21.3.50.
+	(mail-mode): Ditto.
+
+2003-02-22  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/mw32misc.el (create-fontset-from-request): Support
+	`centering' option.
+	(change-fontset-from-request): Ditto.
+
+2003-02-19  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* image.el (image-type-from-file-header): Make temporary buffer
+	unibyte. This code is imported from emacs-21.3.50.
+
+2003-02-12  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/mw32misc.el (w32-regist-initial-font): Rename
+	w32-charset-encoding-alist mw32-charset-windows-font-info-alist.
+	(set-font-from-logfont): Ditto.
+	(w32-enum-logfont-from-charset): Ditto.
+	(w32-modify-logfont-from-request): Modify italic component too.
+	(mw32-build-font-spec): New function.
+	(create-fontset-from-request): Build strict-spec of font requests.
+	(change-fontset-from-request): Ditto.
+
+	* international/meadow.el: Add BMP to image-type-regexps and
+	image-file-name-extensions.
+	Cache the result of w32-enum-logfont().
+
+2003-01-30  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el (w32-list-fonts): Use w32-font-list ()
+	to list font requests.
+
+2003-01-29  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/mw32misc.el (w32-generate-font-fontset-menu):
+	Generate a font menu that is composed of font requests.
+
+2003-01-22  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in: Suppress compilation warnings.
+
+2003-01-09  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el: Undo the last change.
+
+2003-01-07  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* international/meadow.el: Set tooltip-use-echo-area t. Current
+	implementation of tooltip does'nt work correctly. So I use
+	echo-area to display help-echo.
+
+2002-11-22  Yoshiki Hayashi  <yoshiki@xemacs.org>
+
+	* international/mw32misc.el (mw32-convert-font-request-attribute):
+	Throw error if option is not assq safe list.
+
+2002-11-18  Yoshiki Hayashi  <yoshiki@meadowy.org>
+
+	* international/mw32misc.el (w32-change-add-font): Call
+	w32-change-font-attribute-internal instead of
+	w32-add-font-internal.
+
+2002-10-20  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in (EMACS): Change name of executable for
+	Meadow 2 featuring Portable-dumper. Thanks to Masayuki FUJII
+	(boochang@m4.kcn.ne.jp).
+	(WINS): Add toolbar. Thanks to Masayuki FUJII
+	(boochang@m4.kcn.ne.jp).
+
+2002-10-17  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	* mw32reg.el: New file. Win32 registry operation API.
+
+2002-10-12  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	* makefile.nt (EMACS): Change name of executable for Meadow 2
+	featuring Portable-dumper.
+
+2002-10-08  Koichiro Ohba  <koichiro@meadowy.org>
+
+	* international/meadow.el (x-file-dialog): New alias for
+	mw32-file-dialog.
+
+2002-09-29  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in: Change install directory in Meadow's
+	way.
+
+2002-09-28  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* makefile.meadow.w32-in: New file. Apply Cygwin/Mingw support
+	patch from Masayuki FUJII (boochang@m4.kcn.ne.jp).
+
+2002-09-09  Koichiro Ohba  <koichiro@meadowy.org>
+
+	* makefile.nt (install): Add copy *.xpm and *.pbm files.
+
+2002-08-23  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/meadow.el (display-images-p):
+	Override the existing definition in image.el.
+
+2002-04-16  Shun-ichi GOTO  <gotoh@taiyo.co.jp>
+
+	* makefile.nt (compile-files): Slash is not suitable for some
+	commmand prompts. Collect usage of FOR variable.
+
+2002-01-26  MIYASHITA Hisashi  <himi@m17n.org>
+
+	* international/meadow.el (modeline): By default, set modeline
+	foreground color to "LightBlue".
+
+2002-01-25  MIYASHITA Hisashi  <himi@m17n.org>
+
+	* international/mw32misc.el
+	(mw32-convert-font-request-attribute): New function.
+	(w32-add-font, w32-change-add-font): From now on, these
+	functions are moved to mw32misc.el.  They wrap the corresponding
+	internal primitive functions.
+
+2002-01-20  Shuichi KITAGUCHI  <kit@meadowy.org>
+
+	* textmodes/flyspell.el: Sync up with 21.1.
+
+	* term/w32-win.el: Sync up with 21.1.
+
+	* progmodes/sql.el: Sync up with 21.1.
+
+	* progmodes/cperl-mode.el: Sync up with 21.1.
+
+	* progmodes/compile.el: Sync up with 21.1.
+
+	* play/tetris.el: Sync up with 21.1.
+
+	* play/snake.el: Sync up with 21.1.
+
+	* play/gamegrid.el: Sync up with 21.1.
+
+	* mail/sc.el: Sync up with 21.1. (Removed)
+
+	* mail/feedmail.el: Sync up with 21.1.
+
+	* language/slovak.el: Sync up with 21.1.
+
+	* language/romanian.el: Sync up with 21.1.
+
+	* language/korea-util.el: Sync up with 21.1.
+
+	* language/japan-util.el: Sync up with 21.1.
+
+	* international/titdic-cnv.el: Sync up with 21.1.
+
+	* international/mule.el: Sync up with 21.1.
+
+	* international/mule-cmds.el: Sync up with 21.1.
+
+	* international/fontset.el: Sync up with 21.1.
+
+	* international/encoded-kb.el: Sync up with 21.1.
+
+	* international/codepage.el: Sync up with 21.1.
+
+	* international/ccl.el: Sync up with 21.1.
+
+	* emacs-lisp/sregex.el: Sync up with 21.1.
+
+	* emacs-lisp/checkdoc.el: Sync up with 21.1.
+
+	* calendar/solar.el: Sync up with 21.1.
+
+	* calendar/lunar.el: Sync up with 21.1.
+
+	* calendar/diary-lib.el: Sync up with 21.1.
+
+	* calendar/calendar.el: Sync up with 21.1.
+
+	* calendar/cal-tex.el: Sync up with 21.1.
+
+	* calendar/cal-persia.el: Sync up with 21.1.
+
+	* calendar/cal-menu.el: Sync up with 21.1.
+
+	* calendar/cal-mayan.el: Sync up with 21.1.
+
+	* calendar/cal-julian.el: Sync up with 21.1.
+
+	* calendar/cal-iso.el: Sync up with 21.1.
+
+	* calendar/cal-islam.el: Sync up with 21.1.
+
+	* calendar/cal-hebrew.el: Sync up with 21.1.
+
+	* calendar/cal-french.el: Sync up with 21.1.
+
+	* calendar/cal-dst.el: Sync up with 21.1.
+
+	* calendar/cal-coptic.el: Sync up with 21.1.
+
+	* calendar/cal-china.el: Sync up with 21.1.
+
+	* calendar/appt.el: Sync up with 21.1.
+
+	* x-menu.el: Sync up with 21.1. (Removed)
+
+	* x-appolo.el: Sync up with 21.1. (Removed)
+
+	* which-func.el: Sync up with 21.1.
+
+	* w32-fns.el: Sync up with 21.1.
+
+	* uncompress.el: Sync up with 21.1. (Removed)
+
+	* sun-fns.el: Sync up with 21.1. (Removed)
+
+	* sun-curs.el: Sync up with 21.1. (Removed)
+
+	* startup.el: Sync up with 21.1.
+
+	* speedbar.el: Sync up with 21.1.
+
+	* shell.el: Sync up with 21.1.
+
+	* rsx-mini.el: Sync up with 21.1. (Removed)
+
+	* repeat.el: Sync up with 21.1.
+
+	* ps-mule.el: Sync up with 21.1.
+
+	* ps-bdf.el: Sync up with 21.1.
+
+	* midnight.el: Sync up with 21.1.
+
+	* makefile.nt: Sync up with 21.1.
+
+	* loadup.el: Sync up with 21.1.
+
+	* loaddefs.el: Sync up with 21.1.
+
+	* hilit-chg.el: Sync up with 21.1.
+
+	* gud.el: Sync up with 21.1.
+
+	* find-gc.el: Sync up with 21.1. (Removed)
+
+	* dos-vars.el: Sync up with 21.1
+
+	* ChangeLog.6: Sync up with 21.1.
+
+	* ChangeLog: Sync up with 21.1.
+
+2002-01-18  MIYASHITA Hisashi  <himi@m17n.org>
+
+	* loaddefs.el: Recreated.
+
+	* international/meadow.el: Merged from Meadow-1_X branch.
+	(use-fancy-splash-screens-p): New function.
+	It replace the configuration of startup.el.
+	(fancy-splash-head): Likewise.
+
+	* international/mw32misc.el: Merged from Meadow-1_X branch.
+	(mw32-charset-windows-font-info-alist): Replace
+	mw32-charset-encoding-alist.
+	(mw32-windows-font-charset-database): Set it from
+	mw32-charset-windows-font-info-alist.
+	(w32-num-mouse-buttons): New variable.
+	(x-bitmap-file-path): New variable.
+	(w32-mouse-operation-init): Initialize w32-num-mouse-buttons.
+
+	* international/mw32script.el: Merged from Meadow-1_X branch.
+
+2002-01-15  MIYASHITA Hisashi  <himi@m17n.org>
+
+	* elc.tar.gz: Note that this file is not commited.
+	Use bootstrap insted.
+
+	* loaddefs.el: Regenerated.
+
+	* ange-ftp.el: Sync up with 21.0.104.
+	* ChangeLog: Sync up with 21.0.104.
+	* ChangeLog.6: Sync up with 21.0.104.
+	* ChangeLog.Meadow: Sync up with 21.0.104.
+	* dos-w32.el: Sync up with 21.0.104.
+	* generic-x.el: Sync up with 21.0.104.
+	* gud.el: Sync up with 21.0.104.
+	* hilit-chg.el: Sync up with 21.0.104.
+	* loadup.el: Sync up with 21.0.104.
+	* makefile.nt: Sync up with 21.0.104.
+	* midnight.el: Sync up with 21.0.104.
+	* ps-bdf.el: Sync up with 21.0.104.
+	* ps-mule.el: Sync up with 21.0.104.
+	* repeat.el: Sync up with 21.0.104.
+	* shell.el: Sync up with 21.0.104.
+	* speedbar.el: Sync up with 21.0.104.
+	* subdirs.el: Sync up with 21.0.104.
+	* w32-fns.el: Sync up with 21.0.104.
+	* which-func.el: Sync up with 21.0.104.
+	* calendar/appt.el: Sync up with 21.0.104.
+	* calendar/cal-french.el: Sync up with 21.0.104.
+	* calendar/cal-move.el: Sync up with 21.0.104.
+	* calendar/cal-tex.el: Sync up with 21.0.104.
+	* calendar/cal-x.el: Sync up with 21.0.104.
+	* calendar/calendar.el: Sync up with 21.0.104.
+	* calendar/diary-lib.el: Sync up with 21.0.104.
+	* calendar/holidays.el: Sync up with 21.0.104.
+	* emacs-lisp/checkdoc.el: Sync up with 21.0.104.
+	* emacs-lisp/sregex.el: Sync up with 21.0.104.
+	* international/ccl.el: Sync up with 21.0.104.
+	* international/codepage.el: Sync up with 21.0.104.
+	* international/encoded-kb.el: Sync up with 21.0.104.
+	* international/fontset.el: Sync up with 21.0.104.
+	* international/mule-cmds.el: Sync up with 21.0.104.
+	* international/mule-conf.el: Sync up with 21.0.104.
+	* international/mule.el: Sync up with 21.0.104.
+	* international/titdic-cnv.el: Sync up with 21.0.104.
+	* language/czech.el: Sync up with 21.0.104.
+	* language/japan-util.el: Sync up with 21.0.104.
+	* language/korea-util.el: Sync up with 21.0.104.
+	* language/romanian.el: Sync up with 21.0.104.
+	* language/slovak.el: Sync up with 21.0.104.
+	* mail/feedmail.el: Sync up with 21.0.104.
+	* progmodes/compile.el: Sync up with 21.0.104.
+	* progmodes/cperl-mode.el: Sync up with 21.0.104.
+	* progmodes/sql.el: Sync up with 21.0.104.
+	* progmodes/vhdl-mode.el: Sync up with 21.0.104.
+	* term/w32-win.el: Sync up with 21.0.104.
+	* textmodes/flyspell.el: Sync up with 21.0.104.
+
+	* Makefile: Removed. (Sync up with 21.0.104.)
+	* auto-show.el: Removed. (Sync up with 21.0.104.)
+	* browse-url.el: Removed. (Sync up with 21.0.104.)
+	* goto-addr.el: Removed. (Sync up with 21.0.104.)
+	* hilit19.el: Removed. (Sync up with 21.0.104.)
+	* hscroll.el: Removed. (Sync up with 21.0.104.)
+	* inf-lisp.el: Removed. (Sync up with 21.0.104.)
+	* ispell.el: Removed. (Sync up with 21.0.104.)
+	* mldrag.el: Removed. (Sync up with 21.0.104.)
+	* net-utils.el: Removed. (Sync up with 21.0.104.)
+	* ph.el: Removed. (Sync up with 21.0.104.)
+	* rcompile.el: Removed. (Sync up with 21.0.104.)
+	* rlogin.el: Removed. (Sync up with 21.0.104.)
+	* snmp-mode.el: Removed. (Sync up with 21.0.104.)
+	* telnet.el: Removed. (Sync up with 21.0.104.)
+	* webjump.el: Removed. (Sync up with 21.0.104.)
+	* zone-mode.el: Removed. (Sync up with 21.0.104.)
+	* emacs-lisp/eval-reg.el: Removed. (Sync up with 21.0.104.)
+	* emacs-lisp/profile.el: Removed. (Sync up with 21.0.104.)
+	* gnus/gnus-load.el: Removed. (Sync up with 21.0.104.)
+	* international/skkdic-cnv.el: Removed. (Sync up with 21.0.104.)
+	* international/skkdic-utl.el: Removed. (Sync up with 21.0.104.)
+	* progmodes/c-mode.el: Removed. (Sync up with 21.0.104.)
+	* progmodes/cc-make.el: Removed. (Sync up with 21.0.104.)
+	* progmodes/cplus-md.el: Removed. (Sync up with 21.0.104.)
+	* progmodes/tcl-mode.el: Removed. (Sync up with 21.0.104.)
+	* textmodes/ooutline.el: Removed. (Sync up with 21.0.104.)
+
+2001-08-20  Keiichi Suzuki  <keiichi@meadowy.org>
+
+	* textmodes/paragraphs.el (forward-sentence): Don't require
+	trailing spaces at end of `sentence-end'.
+
+2001-07-31  Kyotaro HORIGUCHI <horiguti@meadowy.org>
+
+	* language/japan-util.el (japanese-symbol-table): Fix handling of
+	Japanese long tone sign.  From Kenichi Handa <handa@etl.go.jp>.
+	(taken from emacs-21.0.104)
+
+	* language/japan-util.el (japanese-hankaku): Prefer the charset
+	`jisx0201' when the optional argument `ascii-only' is not
+	specified.
+	(japanese-hankaku-region): Ditto.
+	From Katsumi Yamaoka <yamaoka@jpl.org>
+	(taken from emacs-21.0.104)
+
+	* language/japanese.el (iso-2022-jp): Exclude katakana-jisx0201 to
+	conform to RFC1468.
+	(iso-2022-jp-2): Exclude katakana-jisx0201 to conform to RFC1554.
+	(taken from emacs-21.0.104)
+
+2001-05-08  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* mw32scroll.el (all of below): Sync up to
+	scroll-bar.el (1997-10-23 <rms@gnu.org>).
+	(set-scroll-bar-mode): Take just one arg.
+	(set-scroll-bar-mode-1): Take 2 args, as set-scroll-bar-mode used
+	to.
+	(scroll-bar-mode variable): Use set-scroll-bar-mode-1.
+	(scroll-bar-mode command): Pass 1 arg to set-scroll-bar-mode.
+
+2001-04-24  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* international/meadow.el (mw32-ime-initialize): use
+	assoc-ignore-case.
+	(Report from YAGI Tatsuya)
+
+2001-04-24  MIYASHITA Hisashi  <himi@meadowy.org>
+
+	* international/mw32misc.el (ccl-encode-cp1251-font):
+	New ccl font encoder.
+	(encode-cp1251-font): Register it.
+	(w32-charset-encoding-alist): Set encode-cp1251-font as
+	a font encoder for RUSSIAN_CHARSET font.
+
+2001-04-23  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* sync up with emacs-20.7
+
+2001-02-24  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* international/mw32misc.el (set-cursor-type): New function.
+	(set-cursor-height): Likewise.
+
+	* international/mw32script.el (mw32script-argument-editing-alist):
+	Support Ruby script.
+
+2001-01-04  MIYASHITA Hisashi  <himi@m17n.org>
+
+	* international/ccl.el (ccl-compile-map-multiple):
+	Bind func variable in let form because func refers itself
+	recursively.
+
+2000-11-26  MIYASHITA Hisashi  <himi@m17n.org>
+
+	* international/codepage.el (cp-make-coding-systems-for-codepage):
+	Set the char of raw 33 col. 33 of japanese-jisx0208 to
+	wide-column-char, because japanese-jisx0208 charset has no
+	codepoint at raw 32 col. 32.
+
+2000-04-09  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* language/japan-util.el (setup-japanese-environment-internal):
+	set-default-coding-system to japanese-shift-jis-dos
+	instead of japanese-shift-jis.
+
+	* international/encoded-kb.el (encoded-kbd-handle-8bit):
+	Deal with utf-8.
+	(encoded-kbd-self-insert-utf-8): New function.
+	(encoded-kbd-mode): Deal with utf-8 coding-system.
+
+2000-03-03  Keiichi Suzuki  <keiichi@nanap.org>
+
+	* mw32faces.el (face-property-put): Remove only the specified
+	property, when `val' is nil.
+
+2000-02-17  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mule.el (make-coding-system):
+	Don't set eol-type slot to nil when given eol-type is nil.
+	Instead, set it to 0.
+
+2000-01-29  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* ispell4.el (ispell-sync):
+	Don't interrupt newly created ispell-process.
+
+1999-10-27  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/meadow.el (wildcard-to-regexp):
+	When generating result at the end, quote quotestr and
+	Add "\\`" to match the beginning.
+
+1999-10-11  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32misc.el:
+	Add argument editing definitions for *.bat,
+	and rewrite the regular expression for cmd.exe and command.com.
+
+	* international/meadow.el (mw32-ime-coding-system-language-environment-alist):
+	New variable.
+	(mw32-ime-initialize): Set keyboard-coding-system if
+	current-language-environment is registered to
+	mw32-ime-coding-system-language-environment-alist.
+
+1999-10-07  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* ange-ftp.el (ange-ftp-insert-file-contents):
+	Set a correct coding-system used by
+	ange-ftp-real-insert-file-contents to last-coding-system-used.
+
+	* international/mw32script.el (mw32script-original-file-executable-p):
+	New variable.
+	(mw32script-file-executable-p):
+	New function.
+	(mw32script-init): Replace the original file-executable-p with
+	mw32script-file-executable-p.  And add "" to exec-suffix-list.
+
+	* term/w32-win.el (w32-drag-n-drop):
+	If a target of drop is frame, call w32-drag-n-drop-other-frame.
+
+1999-09-04  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/titdic-cnv.el (titdic-convert):
+	In order to read text whose line separator is not LF,
+	bind coding-system-for-read to not no-conversion
+	but raw-text.
+
+1999-09-03  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* term/w32-win.el:
+	w32-add-font "default" instead of "initial"
+	because it is selected if "default-fontset"
+	is not created.
+
+	* international/mw32misc.el :
+	require regexp-opt only in compilation.
+	(define-argument-editing-from-program-list):
+	New macro.
+	("fiber.exe"...):
+	Rewrite with the above macro.
+
+1999-09-02  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32misc.el:
+	Rewrite standard argument editing configurations by
+	regexp-opt, and append swath to this.
+
+1999-08-31  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32misc.el (w32-charset-encoding-alist):
+	Add relative-compose key in the thai-tis620 slot.
+	(w32-modify-logfont-from-request):
+	Resize width of a font if it is propotional.
+	(set-font-from-logfont):
+	Use the third element of each slot of
+	w32-charset-encoding-alist as an alist for (w32-add-font).
+
+1999-08-29  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32misc.el
+	(w32-select-logfont-from-required):
+	(w32-select-logfont-from-recommended):
+	Rewrite with w32-score-logfont-candidates.
+	(w32-enum-logfont-from-charset):
+	(w32-clear-logfont-list-cache):
+	New functions.
+	(w32-font-list-cache-all):
+	Rename w32-font-list-cache.
+	(w32-font-list-cache-charset):
+	New variable.
+	(w32-logfont-list-from-request):
+	Rewrite with w32-enum-logfont-from-charset.
+
+	* international/meadow.el (Meadow):
+	Add defgroup for meadow.
+
+	* subdirs.el ("textmodes"):
+	Remove "gnus" directory.
+
+1999-08-09  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32misc.el (install-lisp-directory-specific-to-emacs-version):
+	(install-lisp-directory-independent-of-emacs-version):
+	New variables.
+	(after-init-hook):
+	Set up above two variables.
+
+	* term/w32-win.el:
+	If (featurep 'meadow), don't evaluate fontset creation expressions
+	for NTEmacs.
+
+	* international/meadow.el (w32-shell-execute):
+	New function.
+
+1999-07-30  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mule.el (make-coding-system):
+	Make a new argument eol-type.
+
+1999-07-29  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mule.el:
+	Modify comment on coding-category.
+	(make-coding-system):
+	Set coding-category from plist.
+
+	* international/mule-conf.el:
+	Append coding-category-utf-8, coding-category-utf-16-be,
+	and coding-category-utf-16-le to the list of
+	set-coding-priority.  And initialize coding-category-utf-8,
+	coding-category-utf-16-be, and coding-category-utf-16-le
+	to nil.
+
+	* international/mule-cmds.el (reset-language-environment):
+	Append coding-category-utf-8, coding-category-utf-16-be,
+	and coding-category-utf-16-le to the list of
+	set-coding-priority.
+	(reset-language-environment):
+	Reinitialize coding-category-utf-8, coding-category-utf-16-be,
+	and coding-category-utf-16-le to nil.
+
+1999-07-27  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/ccl.el (ccl-embed-symbol): New function.
+	(ccl-program-p): Deleted.  Now it's implemented in C code.
+	(ccl-compile-call): Use ccl-embed-symbol to embed a symbol.
+	(ccl-compile-translate-character): Likewise.
+	(ccl-compile-map-single): Likewise.
+	(ccl-compile-multiple-map-function): Likewise.
+	(declare-ccl-program): Doc-string modified.
+	(check-ccl-program): Check compiled CCL code by ccl-program-p.
+	These changes are from Handa-san.
+
+1999-07-20  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32misc.el:
+	Add argument editing definitions on fiber.exe and telnet.exe.
+
+1999-07-18  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/meadow.el (mw32-ime-init-mode-line-display): When
+	mode-line-format is set, check whether the car of mode-line-format
+	is stringp or not, and then compare it to "-".  And if it is not
+	string, set the car of mode-line-format to "" as well.
+	(Thanks, K.Mori [meadow-develop 1214])
+
+1999-06-25  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32script.el (mw32script-resolve-script):
+	Before insert-file-contents, bind coding-system-for-read
+	to 'raw-text.  (Thanks, Shun-ichi Goto. [Mew-Win32 01553])
+
+1999-05-03  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* mw32scroll.el (w32-scroll-bar-drag):
+	New function based on scroll-bar-drag from scroll-bar.el.
+	(w32-scroll-bar-drag-1):
+	New function based on scroll-bar-drag-1 from scroll-bar.el.
+	(w32-handle-scroll-bar-event):
+	In the case of a handle event, call w32-scroll-bar-drag instead of
+	scroll-bar-maybe-set-window-start, becase I take a consideration
+	mainly to speed.
+
+1999-05-01  Horiguchi Kyotaro  <kyota@po.ntts.co.jp>
+
+	* term/w32-win.el (w32-drag-n-drop):
+	Set target window with event object.
+
+1999-02-26  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/mw32script.el (mw32script-init):
+	quote mw32script-argument-editing-function with `function'.
+
+1999-02-21  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* mw32scroll.el (scroll-bar-mode):
+	set the previous scroll-bar-mode if change frame-parameter
+	about scroll bar. (from Y.Hayashi)
+	(toggle-scroll-bar):
+	New function. (from Y.Hayashi)
+
+	* shell.el (shell-file-name-chars):
+	Add `,' and `;' to shell-file-name-chars on windows-nt.
+
+1999-02-20  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/meadow.el (x-parse-geometry):
+	New function.
+
+1999-02-18  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* makefile.nt (install):
+	To suppress copying needless directories or files,
+	copy only *.elc and *.el files in the case of
+	COPY_LISP_SOURCE.
+
+	* subdirs.el:
+	append "emu" and "apel" directory.
+
+	* international/meadow.el (mw32-ime-select-window-hook):
+	(mw32-ime-set-selected-window-buffer-hook):
+	Use w32-ime-undetermined-string-length.
+
+	* loadup.el (buffer-undo-list):
+	Change the location where fns-VERSION file is created.
+
+1999-02-16  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* language/japan-util.el (setup-japanese-environment-internal):
+	set default coding systems on Meadow.
+
+1999-02-05  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* mw32misc.el (msvc-process-argument-quoting):
+	If the resultant string ends with '\\', quote it with '\\'s.
+	reported from K.Mori.
+
+1998-03-25  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/ccl.el (declare-ccl-program):
+	add an optional argument;VECTOR.
+
+1998-03-19  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* international/ccl.el (ccl-compile-translate-multiple-map):
+	modify for nested tables.
+	(ccl-compile-unify-character):
+	Bug fix: inhibit integer unification table.
+
+1998-02-04  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* language/japan-util.el (setup-japanese-environment):
+	add japanese configurations on Meadow.
+
+1997-11-03  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* term/w32-win.el ((fboundp 'new-fontset)):
+	add (require 'fontset)
+
+1997-10-23  Miyashita Hisashi  <himi@bird.scphys.kyoto-u.ac.jp>
+
+	* frame.el (other-frame):
+	w32-focus-frame does not exist.
+	comment out it.
+
+	* w32-fns.el (w32-check-shell-configuration):
+	meadow does't have w32-quote-process-args.
+
+1997-08-28  Miyashita Hisashi  <himi@etl.go.jp>
+
+	* pop3.el (pop3-movemail-file-coding-system): Append it for
+	assigning a coding system to receive mail with pop3.
+	(pop3-movemail): Modify for writing messages with
+	pop3-movemail-file-coding-system.

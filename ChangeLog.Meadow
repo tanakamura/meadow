@@ -1,0 +1,331 @@
+2009-06-08  Hideyuki SHIRAI  <shirai@meadowy.org>
+
+	* Sync up with Emacs22.3.
+
+2008-04-04  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22.2.
+
+2007-07-07  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22.1.
+
+2007-06-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22 BASE.
+
+2007-05-12  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs22 BASE.
+
+2007-05-01  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-04-07  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-03-21  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-02-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2007-01-08  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-11-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-10-29  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-10-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-09-30  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-09-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-09-09  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-08-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-08-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-29  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-07-01  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-27  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-18  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-13  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-05-03  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-04-16  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-02-15  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2006-01-28  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-11-26  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-11-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-10-02  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-09-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-08-27  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-08-20  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-08-06  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-06-25  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-05-14  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-04-24  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* Sync up with Emacs CVS HEAD.
+
+2005-04-11  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* nt: Sync up with Emacs CVS HEAD.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+	* vms: Sync up with Emacs CVS HEAD.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* msdos: Sync up with Emacs CVS HEAD.
+
+	* notes: New directory from Emacs CVS HEAD.
+
+	* oldXMenu: Sync up with Emacs CVS HEAD.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* mac: Sync up with Emacs CVS HEAD.
+
+	* man: Ditto.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* lib-src: Sync up with Emacs CVS HEAD.
+
+	* lwlib: Ditto.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* info: Sync up with Emacs CVS HEAD.
+
+	* leim: Ditto.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* etc: Sync up with Emacs CVS HEAD.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* vpath.sed: Sync up with Emacs CVS HEAD.
+
+	* update-subdirs: Ditto.
+
+	* mkinstalldirs: Ditto.
+
+	* make-dist: Ditto.
+
+	* install-sh: Ditto.
+
+	* configure.in: Ditto.
+
+	* config.bat: Ditto.
+
+	* README: Ditto.
+
+	* Makefile.in: Ditto.
+
+	* INSTALL: Ditto.
+
+	* FTP: Ditto.
+
+	* ChangeLog: Ditto.
+
+	* BUGS: Ditto.
+
+	* AUTHORS: Ditto.
+
+2005-04-10  MIYOSHI Masanori  <miyoshi@meadowy.org>
+
+	* admin: Imported from Emacs CVS HEAD.
+
+2004-07-07  KOSEKI Yoshinori  <kose@meadowy.org>
+
+	* Meadow 2.00 (KIKYOU) Release.
+
+2003-12-31  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* PROBLEMS: Removed.
+
+	* cpp/cexp.y: Ditto.
+
+	* cpp/cccp.c: Ditto.
+
+	* cpp/README: Ditto.
+
+	* cpp/Makefile: Ditto.
+
+2003-12-29  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* Sync up with Emacs-21.3.
+
+2003-12-28  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* Sync up with Emacs-21.2.
+
+2003-11-15  MIYOSHI Masanori  <miyoshi@boreas.dti.ne.jp>
+
+	* site-lisp/subdirs.el: Bind no-byte-compile to t.
+
+2002-04-14  Keiichiro Nagano  <knagano@sodan.org>
+
+	* configure.in (PDUMP, PDUMP_DEBUG): Add --with-pdump and
+	--with-pdump=debug.
+
+	* Makefile.in (install-arch-dep): Copy emacs.dmp to bindir when
+	PDUMP is defined.
+
+2002-01-20  Shuichi KITAGUCHI  <kit@meadowy.org>
+
+	* TUTORIAL.pl: Sync up with 21.1.
+
+	* TUTORIAL.ko: Sync up with 21.1.
+
+	* TUTORIAL.de: Sync up with 21.1.
+
+	* TUTORIAL.cs: Sync up with 21.1.
+
+	* PROBLEMS: Sync up with 21.1.
+
+	* info/reftex-3: Sync up with 21.1.
+
+	* info/reftex-2: Sync up with 21.1.
+
+	* info/reftex-1: Sync up with 21.1.
+
+	* info/reftex: Sync up with 21.1.
+
+	* info/emacs-32: Sync up with 21.1.
+
+	* reftex.texi: Sync up with 21.1.
+
+	* reftex.cps: Sync up with 21.1.
+
+	* reftex.aux: Sync up with 21.1.
+
+	* mh-e.texi: Sync up with 21.1.
+
+2002-01-15  MIYASHITA Hisashi  <himi@m17n.org>
+
+	* etc/PROBLEMS: Sync up with 21.0.104.
+	* etc/TUTORIAL.ja: Ditto.
+	* etc/TUTORIAL.nl: Ditto.
+	* etc/TUTORIAL.ro: Ditto.
+	* etc/TUTORIAL.sl: Ditto.
+	* info/emacs-32: Ditto.
+	* info/reftex: Ditto.
+	* info/reftex-1: Ditto.
+	* info/reftex-2: Ditto.
+	* info/reftex-3: Ditto.
+	* info/widget: Ditto.
+	* man/mh-e.texi: Ditto.
+	* man/reftex.texi: Ditto.
+	* msdos/sed6.inp: Ditto.
+	* msdos/sedleim.inp: Ditto.
+
+	* GETTING.GNU.SOFTWARE: Removed. (Sync up with 21.0.104)
+	* install.sh: Removed. (Sync up with 21.0.104)
+	* etc/3B-MAXMEM: Removed. (Sync up with 21.0.104)
+	* etc/AIX.DUMP: Removed. (Sync up with 21.0.104)
+	* etc/CHARSETS: EM: Removed. (Sync up with 21.0.104)
+	* etc/CODINGS: Removed. (Sync up with 21.0.104)
+	* etc/FAQ: Removed. (Sync up with 21.0.104)
+	* etc/LNEWS: Removed. (Sync up with 21.0.104)
+	* etc/OONEWS: Removed. (Sync up with 21.0.104)
+	* etc/OOONEWS: Removed. (Sync up with 21.0.104)
+	* etc/OOOONEWS: Removed. (Sync up with 21.0.104)
+	* etc/OOOOONEWS: Removed. (Sync up with 21.0.104)
+	* etc/SUN-SUPPORT: Removed. (Sync up with 21.0.104)
+	* etc/news.texi: Removed. (Sync up with 21.0.104)
+	* etc/refcard.bit: Removed. (Sync up with 21.0.104)
+	* man/ediff.fns: Removed. (Sync up with 21.0.104)
+	* man/ediff.vrs: Removed. (Sync up with 21.0.104)
+	* man/forms.vrs: Removed. (Sync up with 21.0.104)
+	* man/gnu1.texi: Removed. (Sync up with 21.0.104)
+	* man/gnus.aux: Removed. (Sync up with 21.0.104)
+	* man/gnus.cps: Removed. (Sync up with 21.0.104)
+	* man/gnus.kys: Removed. (Sync up with 21.0.104)
+	* man/info-stnd.texi: Removed. (Sync up with 21.0.104)
+	* man/split-man: Removed. (Sync up with 21.0.104)
