@@ -30,7 +30,7 @@ extern "C" {
 static cling::Interpreter *interp;
 
 static cling::MetaProcessor *metaproc;
-static FILE *debug_out;
+//static FILE *debug_out;
 static std::string message_buffer;
 static llvm::raw_string_ostream *buffer_output;
 
@@ -44,7 +44,7 @@ eval_string(const char *str)
     metaproc->process(str, r, NULL);
 
     if (r != cling::Interpreter::kSuccess) {
-        fprintf(debug_out, "error = %d\n", (int)r);
+        //fprintf(debug_out, "error = %d\n", (int)r);
         error("compilation error (fixme obtaion error mesage)");
     }
 }
@@ -113,7 +113,7 @@ eval_region(Lisp_Object start,
     memcpy(buffer, buf_data+start_bytepos, len);
     buffer[len] = '\0';
 
-    fprintf(debug_out, "%d %d %s\n", start_bytepos, end_bytepos, buffer);
+    //fprintf(debug_out, "%d %d %s\n", start_bytepos, end_bytepos, buffer);
 
     eval_string(buffer);
 
@@ -165,7 +165,7 @@ syms_of_clang(void)
 void
 init_clang(void)
 {
-    debug_out = fopen("c:/logs/debug.txt", "wb");
+    //debug_out = fopen("c:/logs/debug.txt", "wb");
 
     char *argv[] = {"meadow.exe", NULL};
     int argc = 1;
@@ -211,7 +211,4 @@ init_clang(void)
 "#include <lisp.h>\n"
 "}\n", r, NULL
 );
-    if (r != cling::Interpreter::kSuccess) {
-        fprintf(debug_out, "inc fail %s %s %s\n", emacs_dir.data(), inc_dir.c_str(), bin_dir.data());
-    }
 }
