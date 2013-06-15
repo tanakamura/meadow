@@ -199,9 +199,9 @@ DEBUG_LINK = -debug:full
 
 !if "$(ARCH)" == "i386"
 !ifdef NOOPT
-ARCH_CFLAGS     = -nologo -D_X86_=1 -c -Zel -W2 -H63 -Od -G3d -Zp8 -MT -D_USE_32BIT_TIME_T $(DEBUG_FLAG)
+ARCH_CFLAGS     = -nologo -D_X86_=1 -c -Zi -W2 -Od -G3d -Zp8 -MT -D_USE_32BIT_TIME_T $(DEBUG_FLAG)
 !else
-ARCH_CFLAGS     = -nologo -D_X86_=1 -c -Zel -W2 -H63 -Oxsb2 -Oy- -G6dF -Zp8 -MT -D_USE_32BIT_TIME_T $(DEBUG_FLAG)
+ARCH_CFLAGS     = -nologo -D_X86_=1 -c -Zi -W2 -Oxsb2 -Oy- -G6dF -Zp8 -MT -D_USE_32BIT_TIME_T $(DEBUG_FLAG)
 !endif
 ARCH_LDFLAGS	= -align:0x1000 $(SYS_LDFLAGS)
 
@@ -251,12 +251,12 @@ EXTRA_LINK      = -profile
 .c{$(BLD)}.obj:
 		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
 .cpp{$(BLD)}.obj:
-		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
+		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) /EHsc -Fo$(BLD)\ $<
 !ELSE
 .c{$(BLD)}.obj::
 		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
 .cpp{$(BLD)}.obj:
-		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) -Fo$(BLD)\ $<
+		$(CC) $(CFLAGS) $(MEADOW_CFLAGS) /EHsc -Fo$(BLD)\ $<
 !ENDIF
 
 # arch-tag: fefa49b0-c23c-46c7-9094-cab2a405058e

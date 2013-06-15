@@ -80,7 +80,6 @@ Boston, MA 02110-1301, USA.  */
 #ifdef HAVE_X_WINDOWS
 #include "xterm.h"
 #endif
-
 #ifdef HAVE_NTGUI
 #ifdef MEADOW
 #include "mw32term.h"

@@ -138,6 +138,23 @@ WIN32OBJ = $(BLD)/mw32term.$(O)		\
 	   $(BLD)/mw32ime.$(O) 		\
 	   $(BLD)/clang.$(O) \
 
+LLVM_LIBS= /LIBPATH:../LLVM/lib \
+LLVMAnalysis.lib         LLVMJIT.lib             LLVMTransformUtils.lib   clangASTMatchers.lib      clangSerialization.lib \
+LLVMArchive.lib          LLVMLinker.lib          LLVMVectorize.lib        clangAnalysis.lib         clangStaticAnalyzerCheckers.lib \
+LLVMAsmParser.lib        LLVMMC.lib              LLVMX86AsmParser.lib     clangBasic.lib            clangStaticAnalyzerCore.lib \
+LLVMAsmPrinter.lib       LLVMMCDisassembler.lib  LLVMX86AsmPrinter.lib    clangCodeGen.lib          clangStaticAnalyzerFrontend.lib \
+LLVMBitReader.lib        LLVMMCJIT.lib           LLVMX86CodeGen.lib       clangDriver.lib           clangTooling.lib \
+LLVMBitWriter.lib        LLVMMCParser.lib        LLVMX86Desc.lib          clangEdit.lib             gtest.lib \
+LLVMCodeGen.lib          LLVMObject.lib          LLVMX86Disassembler.lib  clangFrontend.lib         gtest_main.lib \
+LLVMCore.lib             LLVMRuntimeDyld.lib     LLVMX86Info.lib          clangFrontendTool.lib     libclang.lib \
+LLVMDebugInfo.lib        LLVMScalarOpts.lib      LLVMX86Utils.lib         clangLex.lib              profile_rt.lib \
+LLVMExecutionEngine.lib  LLVMSelectionDAG.lib    LLVMipa.lib              clangParse.lib            \
+LLVMInstCombine.lib      LLVMSupport.lib         LLVMipo.lib              clangRewriteCore.lib      \
+LLVMInstrumentation.lib  LLVMTableGen.lib        clangARCMigrate.lib      clangRewriteFrontend.lib  \
+LLVMInterpreter.lib      LLVMTarget.lib          clangAST.lib             clangSema.lib             \
+clingInterpreter.lib clingMetaProcessor.lib clingUserInterface.lib clingUtils.lib
+
+
 
 LIBS =  $(TLIB0)	\
 	$(TLIB1)	\
@@ -151,7 +168,8 @@ LIBS =  $(TLIB0)	\
 	$(MPR)		\
 	$(SHELL32)	\
 	$(WINSPOOL)	\
-	$(libc)
+	$(libc)		\
+	$(LLVM_LIBS)
 
 
 

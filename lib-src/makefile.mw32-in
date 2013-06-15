@@ -160,7 +160,7 @@ obj=    sunfns.o dosfns.o msdos.o \
 	abbrev.o syntax.o bytecode.o \
 	process.o callproc.o \
 	region-cache.o sound.o atimer.o \
-	doprnt.o strftime.o intervals.o textprop.o composite.o md5.o
+	doprnt.o strftime.o intervals.o textprop.o composite.o md5.o clang.opp
 
 #
 # These are the lisp files that are loaded up in loadup.el

@@ -1722,6 +1722,7 @@ main (argc, argv
   init_sound ();
 #endif
   init_window ();
+  init_clang ();
 
   if (!initialized)
     {

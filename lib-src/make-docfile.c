@@ -559,7 +559,15 @@ scan_c_file (filename, mode)
   int extension = filename[strlen (filename) - 1];
 
   if (extension == 'o')
-    filename[strlen (filename) - 1] = 'c';
+    {
+      filename[strlen (filename) - 1] = 'c';
+    }
+  else if (extension == 'p')
+    {
+      filename[strlen (filename) - 1] = 'p';
+      filename[strlen (filename) - 2] = 'p';
+      filename[strlen (filename) - 3] = 'c';
+    }
 
   infile = fopen (filename, mode);
 

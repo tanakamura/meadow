@@ -22,6 +22,7 @@ along with GNU Emacs; see the file COPYING.  If not, write to
 the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301, USA.  */
 
+#include "dllexport.h"
 
 /* File descriptor set emulation.  */
 
@@ -138,7 +139,7 @@ extern void globals_of_w32select (void);
 extern void term_w32select (void);
 extern void syms_of_w32menu (void);
 extern void globals_of_w32menu (void);
-extern void syms_of_fontset (void);
+DLLEXPORT extern void syms_of_fontset (void);
 
 #ifdef MEADOW
 
